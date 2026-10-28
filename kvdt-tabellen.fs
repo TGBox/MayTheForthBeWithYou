@@ -1,6 +1,6 @@
 \ ===================================================================
 \  kvdt-tabellen.fs  --  GENERIERT von werkzeug/tabellen_erzeugen.py
-\  Quelle: KBV Datensatzbeschreibung KVDT, Version 6.08 vom 24. August 2026
+\  Quelle: KBV Datensatzbeschreibung KVDT (PDF), Version 6.08 vom 24. August 2026
 \  Nicht von Hand bearbeiten - Generator anpassen und neu erzeugen.
 \ ===================================================================
 
@@ -80,7 +80,7 @@ create feldtabelle
   3122  97 2  40  0 0 feld" PostfachOrt"
   3123  97 2   8  0 0 feld" Postfach"
   3124  97 2   3  0 0 feld" PostfachWohnsitzlaendercode"
-  3673  97 0   3  5 6 feld" Dauerdiagnose (ICDCode)"
+  3673  97 0   3  5 6 feld" Dauerdiagnose (ICD-Code)"
   3674  97 0   1  0 0 feld" Diagnosensicherheit Dauerdiagnose"
   3675  97 0   1  0 0 feld" Seitenlokalisation Dauerdiagnose"
   3676  97 2  60  0 0 feld" Diagnosenerläuterung Dauerdiagnose"
@@ -109,7 +109,7 @@ create feldtabelle
   4133 100 0   8  0 0 feld" VersicherungsschutzBeginn"
   4134  97 2  45  0 0 feld" Kostentraegername"
   4202 110 0   1  0 0 feld" Unfall, Unfallfolgen"
-  4204 110 0   1  0 0 feld" eingeschränkter Leistungsanspruch gemäß §16 Abs. 3a SGB V"  \ Korrektur: Text 'Abs. 3a' wurde als Laenge 3, Typ a erkannt; Tabelle: 1 n
+  4204 110 0   1  0 0 feld" eingeschränkter Leistungsanspruch gemäß §16 Abs. 3a SGB V"
   4205  97 2  60  0 0 feld" Auftrag"
   4206 100 0   8  0 0 feld" Mutm. Tag der Entbindung"
   4207  97 2  60  0 0 feld" Diagnose/ Verdachtsdiagnose"
@@ -124,7 +124,7 @@ create feldtabelle
   4225 110 0   9  0 0 feld" ASV-Teamnummer des Erstveranlassers"
   4226 110 0   9  0 0 feld" ASV-Teamnummer des Überweisers"
   4229 110 0   5  0 0 feld" Ausnahmeindikation"
-  4233 110 0  16  0 0 feld" Stationäre Behandlung von... bis..."  \ Korrektur: Bezeichnung und Laenge stehen ohne Leerzeichen hintereinander
+  4233 110 0  16  0 0 feld" Stationäre Behandlung von... bis..."
   4234 110 0   1  0 0 feld" anerkannte Psychotherapie"
   4235 100 0   8  0 0 feld" Datum des Anerkennungsbescheides"
   4236 110 0   1  0 0 feld" Abklärung somatischer Ursachen vor Aufnahme einer Psychother"
@@ -133,8 +133,8 @@ create feldtabelle
   4242 110 0   9  0 0 feld" Lebenslange Arztnummer des Überweisers"
   4243  97 2  60  0 0 feld" Weiterbehandelnder Arzt"
   4247 100 0   8  0 0 feld" Antragsdatum (des Anerkennungsescheides)"
-  4248 110 0   9  0 0 feld" Pseudo-LANR (für Krankenhausärzte im Rahmen der ASVAbrechnun"
-  4249 110 0   9  0 0 feld" Pseudo-LANR (für Krankenhausärzte im Rahmen der ASVAbrechnun"
+  4248 110 0   9  0 0 feld" Pseudo-LANR (für Krankenhausärzte im Rahmen der ASV-Abrechnu"
+  4249 110 0   9  0 0 feld" Pseudo-LANR (für Krankenhausärzte im Rahmen der ASV-Abrechnu"
   4250 110 0   1  0 0 feld" Kombinationsbehandlung aus Einzelund Gruppentherapie"
   4251 110 0   1  0 0 feld" Durchführungsart der Kombinationsbehandlung"
   4252 110 2   3  0 0 feld" Gesamtanzahl bewilligter Therapieeinheiten für den Versicher"
@@ -145,7 +145,7 @@ create feldtabelle
   4257 110 2   3  0 0 feld" Anzahl der abgerechneten GOPen für die Bezugsperson"
   4299 110 0   9  0 0 feld" Lebenslange Arztnummer (LANR) des Vertragspsychotherapeuten"
   5000 100 0   8  0 0 feld" Leistungstag"
-  5001  97 2   9  0 0 feld" Gebührennummer (GNR)"  \ Korrektur: Tabelle: '<= 9 bzw. 5, 6'; 5/6 Stellen ergeben sich aus Regel 042
+  5001  97 2   9  0 0 feld" Gebührennummer (GNR)"
   5002  97 2  60  0 0 feld" Art der Untersuchung"
   5003 110 0   9  0 0 feld" (N)BSNR des vermittelten Facharztes"
   5005 110 0   3  0 0 feld" Multiplikator"
@@ -170,9 +170,9 @@ create feldtabelle
   5034 100 0   8  0 0 feld" OP-Datum"
   5035  97 2   8  0 0 feld" OP-Schlüssel"
   5036  97 0   5  6 0 feld" GNR als Begründung"
-  5037 110 2   3  0 0 feld" Gesamt-SchnittNaht-Zeit (Minuten)"
+  5037 110 2   3  0 0 feld" Gesamt-Schnitt-Naht-Zeit (Minuten)"
   5038  97 2  60  0 0 feld" Komplikation"
-  5040  97 2   8  0 0 feld" Patientennummer der eDokumentation HautkrebsScreening"
+  5040  97 2   8  0 0 feld" Patientennummer der eDokumentation Hautkrebs-Screening"
   5041  97 0   1  0 0 feld" Seitenlokalisation OPS"
   5042 110 2   5  0 0 feld" Mengenangabe Kontrast-/Arzneimittel"
   5043 110 0   1  0 0 feld" Maßeinheit Kontrast-/Arzneimittel"
@@ -188,8 +188,8 @@ create feldtabelle
   5098 110 0   9  0 0 feld" (N)BSNR des Ortes der Leistungserbringung"
   5099 110 0   9  0 0 feld" Lebenslange Arztnummer (LANR) des Vertragsarztes/Vertragspsy"
   5100 110 0   9  0 0 feld" ASV-Teamnummer des Vertragsarztes"
-  5101 110 0   9  0 0 feld" Pseudo-LANR (für Krankenhausärzte im Rahmen der ASVAbrechnun"
-  5102 110 0   9  0 0 feld" Krankenhaus-IK (im Rahmen der ASVAbrechnung)"
+  5101 110 0   9  0 0 feld" Pseudo-LANR (für Krankenhausärzte im Rahmen der ASV-Abrechnu"
+  5102 110 0   9  0 0 feld" Krankenhaus-IK (im Rahmen der ASV-Abrechnung)"
   6001  97 0   3  5 6 feld" ICD-Code"
   6003  97 0   1  0 0 feld" Diagnosensicherheit"
   6004  97 0   1  0 0 feld" Seitenlokalisation"
@@ -210,608 +210,610 @@ create feldtabelle
   9901  97 2  60  0 0 feld" Systeminterner Parameter"
   0 0 0 0 0 0 feld" "
 
-\ Satztabellen:  FK  Vorkommen(1|0=n)  Feldart(Zeichen)  Zone  st,
-\   Zone (nur Behandlungsfaelle): 0 = Kopf, 1 = Leistungen (ab 5000),
-\   2 = Diagnosen (ab 6001), 3 = Dauerdiagnosen (ab 3673)
+\ Satztabellen:  FK  Vorkommen(1|0=n)  Feldart  Ebene  st,
+\   Feldart als Zeichen: M = unbedingtes Mussfeld, m = bedingtes Mussfeld,
+\   P = bedingtes Mussfeld ohne Bedingung (gebunden an das uebergeordnete Feld,
+\   Kap. 1.5.3), K = Kannfeld, k = bedingtes Kannfeld
+\   Ebene: Hierarchiestufe aus der Spalte Vorkommen (1 = Satzebene)
 create st-con0
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
-  9103 1  77 0 st,   \ 9103 1 M  Erstellungsdatum
-  9106 1  77 0 st,   \ 9106 1 M  verwendeter Zeichensatz
-  9132 0  77 0 st,   \ 9132 n M  enthaltene Datenpakete dieser Datei
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
+  9103 1  77 1 st,   \ 9103 1 M  Erstellungsdatum
+  9106 1  77 1 st,   \ 9106 1 M  verwendeter Zeichensatz
+  9132 0  77 1 st,   \ 9132 n M  enthaltene Datenpakete dieser Date  [ist, unter der]
   0 0 0 0 st,
 create st-con9
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
   0 0 0 0 st,
 create st-besa
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
-   201 0 109 0 st,   \ 0201 n m  Betriebs- (BSNR) oder Nebenbetriebsstätt
-   203 1 109 0 st,   \ 0203 1 m  (N)BSNR-/Krankenhaus-Bezeichnung
-   212 0 109 0 st,   \ 0212 n m  Lebenslange Arztnummer (LANR)
-   219 1 107 0 st,   \ 0219 1 k  Titel des Arztes
-   220 1 107 0 st,   \ 0220 1 k  Arztvorname
-   221 1 107 0 st,   \ 0221 1 k  Namenszusatz des Arztes
-   211 1 109 0 st,   \ 0211 1 m  Arztname oder Erläuterung
-   222 0  75 0 st,   \ 0222 n K  ASV-Teamnummer
-   223 0 109 0 st,   \ 0223 n m  Pseudo-LANR für Krankenhausärzte im
-   219 1 107 0 st,   \ 0219 1 k  Titel des Arztes
-   220 1 107 0 st,   \ 0220 1 k  Arztvorname
-   221 1 107 0 st,   \ 0221 1 k  Namenszusatz des Arztes
-   211 1 109 0 st,   \ 0211 1 m  Arztname oder Erläuterung
-   222 0 109 0 st,   \ 0222 n m  ASV-Teamnummer
-   205 1 109 0 st,   \ 0205 1 m  Straße der (N)BSNR-/ Krankenhaus- Adress
-   215 1 109 0 st,   \ 0215 1 m  PLZ der (N)BSNR-/ Krankenhaus-Adresse
-   216 1 109 0 st,   \ 0216 1 m  Ort der (N)BSNR-/ Krankenhaus-Adresse
-   208 1 109 0 st,   \ 0208 1 m  Telefonnummer
-   209 1 107 0 st,   \ 0209 1 k  Telefaxnummer
-   218 1 107 0 st,   \ 0218 1 k  E-Mail der Betriebsstätte/Praxis/Kranken
-   224 1 109 0 st,   \ 0224 1 m  Produkttypversion des Konnektors
-   227 1 109 0 st,   \ 0227 1 m  Ablaufdatum des Konnektorzertifikats
-   228 0 109 0 st,   \ 0228 n m  Produktname des Konnektors
-   225 0 109 0 st,   \ 0225 n m  TI-Fachanwendung / TI-Komponente
-   226 1 109 0 st,   \ 0226 1 m  Systemunterstützung / Ausstattung der Pr
-   213 0 109 0 st,   \ 0213 n m  Krankenhaus-IK (im Rahmen der ASV-Abrech
-   214 1 109 0 st,   \ 0214 1 m  KV-Bereich
-   203 1 109 0 st,   \ 0203 1 m  (N)BSNR-/Krankenhaus-Bezeichnung
-   212 0 109 0 st,   \ 0212 n m  Lebenslange Arztnummer (LANR)
-   219 1 107 0 st,   \ 0219 1 k  Titel des Arztes
-   220 1 107 0 st,   \ 0220 1 k  Arztvorname
-   221 1 107 0 st,   \ 0221 1 k  Namenszusatz des Arztes
-   211 1 109 0 st,   \ 0211 1 m  Arztname oder Erläuterung
-   222 0  75 0 st,   \ 0222 n K  ASV-Teamnummer
-   223 0 109 0 st,   \ 0223 n m  Pseudo-LANR für Krankenhausärzte im
-   219 1 107 0 st,   \ 0219 1 k  Titel des Arztes
-   220 1 107 0 st,   \ 0220 1 k  Arztvorname
-   221 1 107 0 st,   \ 0221 1 k  Namenszusatz des Arztes
-   211 1 109 0 st,   \ 0211 1 m  Arztname oder Erläuterung
-   222 0 109 0 st,   \ 0222 n m  ASV-Teamnummer
-   205 1 109 0 st,   \ 0205 1 m  Straße der (N)BSNR-/ Krankenhaus- Adress
-   215 1 109 0 st,   \ 0215 1 m  PLZ der (N)BSNR-/ Krankenhaus-Adresse
-   216 1 109 0 st,   \ 0216 1 m  Ort der (N)BSNR-/ Krankenhaus-Adresse
-   208 1 109 0 st,   \ 0208 1 m  Telefonnummer
-   209 1 107 0 st,   \ 0209 1 k  Telefaxnummer
-   218 1 107 0 st,   \ 0218 1 k  E-Mail der Betriebsstätte/Praxis/Kranken
-   224 1 109 0 st,   \ 0224 1 m  Produkttypversion des Konnektors
-   227 1 109 0 st,   \ 0227 1 m  Ablaufdatum des Konnektorzertifikats
-   228 0 109 0 st,   \ 0228 n m  Produktname des Konnektors
-   225 0 109 0 st,   \ 0225 n m  TI-Fachanwendung / TI-Komponente
-   226 1 109 0 st,   \ 0226 1 m  Systemunterstützung / Ausstattung der Pr
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
+   201 0 109 1 st,   \ 0201 n m  Betriebs- (BSNR) oder Nebenbetrieb  [Regel 857 Regel 875 Regel 878]
+   203 1  80 2 st,   \   0203 1 P  (N)BSNR-/Krankenhaus-Bezeichnung
+   212 0 109 2 st,   \   0212 n m  Lebenslange Arztnummer (LANR)  [Regel 836 Regel 875]
+   219 1 107 3 st,   \     0219 1 k  Titel des Arztes
+   220 1 107 3 st,   \     0220 1 k  Arztvorname
+   221 1 107 3 st,   \     0221 1 k  Namenszusatz des Arztes
+   211 1  80 3 st,   \     0211 1 P  Arztname oder Erläuterung
+   222 0  75 3 st,   \     0222 n K  ASV-Teamnummer
+   223 0 109 2 st,   \   0223 n m  Pseudo-LANR für Krankenhausärzte i  [Regel 836]
+   219 1 107 3 st,   \     0219 1 k  Titel des Arztes
+   220 1 107 3 st,   \     0220 1 k  Arztvorname
+   221 1 107 3 st,   \     0221 1 k  Namenszusatz des Arztes
+   211 1  80 3 st,   \     0211 1 P  Arztname oder Erläuterung
+   222 0  80 3 st,   \     0222 n P  ASV-Teamnummer
+   205 1  80 2 st,   \   0205 1 P  Straße der (N)BSNR-/ Krankenhaus- 
+   215 1  80 2 st,   \   0215 1 P  PLZ der (N)BSNR-/ Krankenhaus-Adre
+   216 1  80 2 st,   \   0216 1 P  Ort der (N)BSNR-/ Krankenhaus-Adre
+   208 1  80 2 st,   \   0208 1 P  Telefonnummer
+   209 1 107 2 st,   \   0209 1 k  Telefaxnummer
+   218 1 107 2 st,   \   0218 1 k  E-Mail der Betriebsstätte/Praxis/K
+   224 1 109 2 st,   \   0224 1 m  Produkttypversion des Konnektors  [Falls die Information]
+   227 1 109 3 st,   \     0227 1 m  Ablaufdatum des Konnektorzertifika  [Regel 872]
+   228 0 109 3 st,   \     0228 n m  Produktname des Konnektors  [Regel 874]
+   225 0 109 2 st,   \   0225 n m  TI-Fachanwendung / TI-Komponente  [Regel 858 Regel 862]
+   226 1  80 3 st,   \     0226 1 P  Systemunterstützung / Ausstattung 
+   213 0 109 1 st,   \ 0213 n m  Krankenhaus-IK (im Rahmen der ASV-  [Regel 857]
+   214 1  80 2 st,   \   0214 1 P  KV-Bereich
+   203 1  80 2 st,   \   0203 1 P  (N)BSNR-/Krankenhaus-Bezeichnung
+   212 0 109 2 st,   \   0212 n m  Lebenslange Arztnummer (LANR)  [Regel 836]
+   219 1 107 3 st,   \     0219 1 k  Titel des Arztes
+   220 1 107 3 st,   \     0220 1 k  Arztvorname
+   221 1 107 3 st,   \     0221 1 k  Namenszusatz des Arztes
+   211 1  80 3 st,   \     0211 1 P  Arztname oder Erläuterung
+   222 0  75 3 st,   \     0222 n K  ASV-Teamnummer
+   223 0 109 2 st,   \   0223 n m  Pseudo-LANR für Krankenhausärzte i  [Regel 836]
+   219 1 107 3 st,   \     0219 1 k  Titel des Arztes
+   220 1 107 3 st,   \     0220 1 k  Arztvorname
+   221 1 107 3 st,   \     0221 1 k  Namenszusatz des Arztes
+   211 1  80 3 st,   \     0211 1 P  Arztname oder Erläuterung
+   222 0  80 3 st,   \     0222 n P  ASV-Teamnummer
+   205 1  80 2 st,   \   0205 1 P  Straße der (N)BSNR-/ Krankenhaus- 
+   215 1  80 2 st,   \   0215 1 P  PLZ der (N)BSNR-/ Krankenhaus-Adre
+   216 1  80 2 st,   \   0216 1 P  Ort der (N)BSNR-/ Krankenhaus-Adre
+   208 1  80 2 st,   \   0208 1 P  Telefonnummer
+   209 1 107 2 st,   \   0209 1 k  Telefaxnummer
+   218 1 107 2 st,   \   0218 1 k  E-Mail der Betriebsstätte/Praxis/K
+   224 1 109 2 st,   \   0224 1 m  Produkttypversion des Konnektors  [Falls die Information über die]
+   227 1 109 3 st,   \     0227 1 m  Ablaufdatum des Konnektorzertifika  [Regel 872]
+   228 0 109 3 st,   \     0228 n m  Produktname des Konnektors  [Regel 874]
+   225 0 109 2 st,   \   0225 n m  TI-Fachanwendung / TI-Komponente  [Regel 858 Regel 862]
+   226 1  80 3 st,   \     0226 1 P  Systemunterstützung / Ausstattung 
   0 0 0 0 st,
 create st-rvsa
-  8000 1 109 0 st,   \ 8000 1 m  Satzart
-   201 0  77 0 st,   \ 0201 n M  Betriebs- (BSNR) oder Nebenbetriebsstätt
-   300 1 109 0 st,   \ 0300 1 m  Abrechnung von (zertifikatspflichtigen) 
-   301 1 109 0 st,   \ 0301 1 m  pnSD/uu-Analysen
-   302 0 109 0 st,   \ 0302 n m  Gerätetyp
-   303 1 109 0 st,   \ 0303 1 m  Hersteller
-   304 0 109 0 st,   \ 0304 n m  Analyt-ID
-   305 1 109 0 st,   \ 0305 1 m  RV-Zertifikat
+  8000 1 109 1 st,   \ 8000 1 m  Satzart  [Regel 743]
+   201 0  77 1 st,   \ 0201 n M  Betriebs- (BSNR) oder Nebenbetrieb
+   300 1  80 2 st,   \   0300 1 P  Abrechnung von (zertifikatspflicht
+   301 1 109 3 st,   \     0301 1 m  pnSD/uu-Analysen  [Regel 740]
+   302 0 109 4 st,   \       0302 n m  Gerätetyp  [Regel 741 Regel 748]
+   303 1  80 5 st,   \         0303 1 P  Hersteller
+   304 0 109 3 st,   \     0304 n m  Analyt-ID  [Regel 740]
+   305 1  80 4 st,   \       0305 1 P  RV-Zertifikat
   0 0 0 0 st,
 create st-adt0
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
-   105 1  77 0 st,   \ 0105 1 M  KBV-Prüfnummer
-  9102 1  77 0 st,   \ 9102 1 M  Empfänger
-  9212 1  77 0 st,   \ 9212 1 M  Version der Satzbeschreibung
-   102 1  77 0 st,   \ 0102 1 M  Softwareverantwortlicher (SV)
-   121 1  77 0 st,   \ 0121 1 M  Straße des SV
-   122 1  77 0 st,   \ 0122 1 M  PLZ des SV
-   123 1  77 0 st,   \ 0123 1 M  Ort des SV
-   124 1  77 0 st,   \ 0124 1 M  Telefonnummer des SV
-   125 1  75 0 st,   \ 0125 1 K  Telefaxnummer des SV
-   111 1  75 0 st,   \ 0111 1 K  E-Mail-Adresse des SV
-   126 1  77 0 st,   \ 0126 1 M  Regionaler Systembetreuer (SB)
-   127 1  77 0 st,   \ 0127 1 M  Straße des SB
-   128 1  77 0 st,   \ 0128 1 M  PLZ des SB
-   129 1  77 0 st,   \ 0129 1 M  Ort des SB
-   130 1  77 0 st,   \ 0130 1 M  Telefonnummer des SB
-   131 1  75 0 st,   \ 0131 1 K  Telefaxnummer des SB
-   103 1  77 0 st,   \ 0103 1 M  Software
-   132 1  75 0 st,   \ 0132 1 K  Release-Stand der Software
-  9115 1  75 0 st,   \ 9115 1 K  Erstellungsdatum ADT-Datenpaket
-  9260 1  75 0 st,   \ 9260 1 K  Anzahl Teilabrechnungen
-  9261 1 109 0 st,   \ 9261 1 m  Abrechnungsteil x von y
-  9204 1  77 0 st,   \ 9204 1 M  Abrechnungsquartal
-  9250 0  75 0 st,   \ 9250 n K  AVWG-Prüfnummer der AVS
-  9251 0  75 0 st,   \ 9251 n K  HMV-Prüfnummer
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
+   105 1  77 1 st,   \ 0105 1 M  KBV-Prüfnummer
+  9102 1  77 1 st,   \ 9102 1 M  Empfänger
+  9212 1  77 1 st,   \ 9212 1 M  Version der Satzbeschreibung
+   102 1  77 1 st,   \ 0102 1 M  Softwareverantwortlicher (SV)
+   121 1  77 1 st,   \ 0121 1 M  Straße des SV
+   122 1  77 1 st,   \ 0122 1 M  PLZ des SV
+   123 1  77 1 st,   \ 0123 1 M  Ort des SV
+   124 1  77 1 st,   \ 0124 1 M  Telefonnummer des SV
+   125 1  75 1 st,   \ 0125 1 K  Telefaxnummer des SV
+   111 1  75 1 st,   \ 0111 1 K  E-Mail-Adresse des SV
+   126 1  77 1 st,   \ 0126 1 M  Regionaler Systembetreuer (SB)
+   127 1  77 1 st,   \ 0127 1 M  Straße des SB
+   128 1  77 1 st,   \ 0128 1 M  PLZ des SB
+   129 1  77 1 st,   \ 0129 1 M  Ort des SB
+   130 1  77 1 st,   \ 0130 1 M  Telefonnummer des SB
+   131 1  75 1 st,   \ 0131 1 K  Telefaxnummer des SB
+   103 1  77 1 st,   \ 0103 1 M  Software
+   132 1  75 1 st,   \ 0132 1 K  Release-Stand der Software
+  9115 1  75 1 st,   \ 9115 1 K  Erstellungsdatum ADT-Datenpaket
+  9260 1  75 1 st,   \ 9260 1 K  Anzahl Teilabrechnungen
+  9261 1  80 2 st,   \   9261 1 P  Abrechnungsteil x von y
+  9204 1  77 1 st,   \ 9204 1 M  Abrechnungsquartal
+  9250 0  75 1 st,   \ 9250 n K  AVWG-Prüfnummer der AVS
+  9251 0  75 1 st,   \ 9251 n K  HMV-Prüfnummer
   0 0 0 0 st,
 create st-adt9
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
   0 0 0 0 st,
 create st-0101
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
-  3000 1  75 0 st,   \ 3000 1 K  Patientennummer
-  3003 1  75 0 st,   \ 3003 1 K  Schein-ID
-  3006 1 109 0 st,   \ 3006 1 m  CDM Version
-  3010 1 109 0 st,   \ 3010 1 m  Datum und Uhrzeit der Onlineprüfung und 
-  3011 1 109 0 st,   \ 3011 1 m  Ergebnis der Onlineprüfung und -aktualis
-  3012 1 107 0 st,   \ 3012 1 k  Error-Code
-  3013 1 107 0 st,   \ 3013 1 k  Prüfziffer des Fachdienstes
-  3100 1  75 0 st,   \ 3100 1 K  Namenszusatz
-  3120 1  75 0 st,   \ 3120 1 K  Vorsatzwort
-  3101 1  77 0 st,   \ 3101 1 M  Name
-  3102 1  77 0 st,   \ 3102 1 M  Vorname
-  3103 1  77 0 st,   \ 3103 1 M  Geburtsdatum
-  3104 1  75 0 st,   \ 3104 1 K  Titel
-  3105 1 109 0 st,   \ 3105 1 m  Versichertennummer
-  3119 1 109 0 st,   \ 3119 1 m  Versicherten_ID
-  3107 1  75 0 st,   \ 3107 1 K  Straße
-  3109 1  75 0 st,   \ 3109 1 K  Hausnummer
-  3115 1  75 0 st,   \ 3115 1 K  Anschriftenzusatz
-  3112 1 109 0 st,   \ 3112 1 m  PLZ
-  3114 1 109 0 st,   \ 3114 1 m  Wohnsitzlaendercode
-  3113 1  75 0 st,   \ 3113 1 K  Ort
-  3121 1 109 0 st,   \ 3121 1 m  PostfachPLZ
-  3122 1  75 0 st,   \ 3122 1 K  PostfachOrt
-  3123 1  75 0 st,   \ 3123 1 K  Postfach
-  3124 1 109 0 st,   \ 3124 1 m  PostfachWohnsitzlaendercode
-  3116 1 109 0 st,   \ 3116 1 m  WOP
-  3108 1  77 0 st,   \ 3108 1 M  Versichertenart
-  3110 1  77 0 st,   \ 3110 1 M  Geschlecht
-  4101 1  77 0 st,   \ 4101 1 M  Quartal
-  4102 1  75 0 st,   \ 4102 1 K  Ausstellungsdatum
-  4104 1  77 0 st,   \ 4104 1 M  Abrechnungs-VKNR
-  4106 1  77 0 st,   \ 4106 1 M  Kostenträger-Abrechnungsbereich (KTAB)
-  4108 1  75 0 st,   \ 4108 1 K  Zulassungsnummer (mobiles Lesegerät)
-  4109 1 109 0 st,   \ 4109 1 m  Letzter Einlesetag der Versichertenkarte
-  4112 1  75 0 st,   \ 4112 1 K  eEB vorhanden
-  4133 1 109 0 st,   \ 4133 1 m  VersicherungsschutzBeginn
-  4110 1  75 0 st,   \ 4110 1 K  Versicherungsschutz Ende
-  4111 1  77 0 st,   \ 4111 1 M  Kostentraegerkennung
-  4134 1 109 0 st,   \ 4134 1 m  Kostentraegername
-  4131 1  77 0 st,   \ 4131 1 M  BesonderePersonengruppe
-  4132 1  77 0 st,   \ 4132 1 M  DMP_Kennzeichnung
-  4121 1  77 0 st,   \ 4121 1 M  Gebührenordnung
-  4122 1  77 0 st,   \ 4122 1 M  Abrechnungsgebiet
-  4123 1  75 0 st,   \ 4123 1 K  Personenkreis / Untersuchungskategorie
-  4124 1  75 0 st,   \ 4124 1 K  SKT-Zusatzangaben
-  4125 1  75 0 st,   \ 4125 1 K  Gültigkeitszeitraum von ... bis ...
-  4126 0  75 0 st,   \ 4126 n K  SKT-Bemerkungen
-  4202 1  75 0 st,   \ 4202 1 K  Unfall, Unfallfolgen
-  4204 1  75 0 st,   \ 4204 1 K  eingeschränkter Leistungsanspruch gemäß 
-  4206 1  75 0 st,   \ 4206 1 K  Mutm. Tag der Entbindung
-  4234 1  75 0 st,   \ 4234 1 K  anerkannte Psychotherapie
-  4235 0 109 0 st,   \ 4235 n m  Datum des Anerkennungsbescheides
-  4299 1 107 0 st,   \ 4299 1 k  Lebenslange Arztnummer (LANR) des Vertra
-  4247 1  75 0 st,   \ 4247 1 K  Antragsdatum (des Anerkennungsescheides)
-  4250 1 107 0 st,   \ 4250 1 k  Kombinationsbehandlung aus Einzelund Gru
-  4251 1 109 0 st,   \ 4251 1 m  Durchführungsart der Kombinationsbehandl
-  4252 1 107 0 st,   \ 4252 1 k  Gesamtanzahl bewilligter Therapieeinheit
-  4253 0 107 0 st,   \ 4253 n k  Bewilligte GOP für den Versicherten
-  4254 1 109 0 st,   \ 4254 1 m  Anzahl der abgerechneten GOPen für den V
-  4255 1 107 0 st,   \ 4255 1 k  Gesamtanzahl bewilligter Therapieeinheit
-  4256 0 107 0 st,   \ 4256 n k  Bewilligte GOP für die Bezugsperson
-  4257 1 109 0 st,   \ 4257 1 m  Anzahl der abgerechneten GOPen für die B
-  4236 1  75 0 st,   \ 4236 1 K  Abklärung somatischer Ursachen vor Aufna
-  4239 1  77 0 st,   \ 4239 1 M  Scheinuntergruppe
-  4103 1  75 0 st,   \ 4103 1 K  Vermittlungs-/Kontaktart
-  4114 1 107 0 st,   \ 4114 1 k  Vermittlungscode
-  4115 1 107 0 st,   \ 4115 1 k  Tag der Terminvermittlung
-  4105 0 107 0 st,   \ 4105 n k  Ergänzende Informationen zur Vermittlung
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
+  3000 1  75 1 st,   \ 3000 1 K  Patientennummer
+  3003 1  75 1 st,   \ 3003 1 K  Schein-ID
+  3006 1 109 1 st,   \ 3006 1 m  CDM Version  [Regel 307]
+  3010 1 109 1 st,   \ 3010 1 m  Datum und Uhrzeit der Onlineprüfun  [falls eGK eingelesen wurde und]
+  3011 1  80 2 st,   \   3011 1 P  Ergebnis der Onlineprüfung und -ak
+  3012 1 107 2 st,   \   3012 1 k  Error-Code
+  3013 1 107 2 st,   \   3013 1 k  Prüfziffer des Fachdienstes
+  3100 1  75 1 st,   \ 3100 1 K  Namenszusatz
+  3120 1  75 1 st,   \ 3120 1 K  Vorsatzwort
+  3101 1  77 1 st,   \ 3101 1 M  Name
+  3102 1  77 1 st,   \ 3102 1 M  Vorname
+  3103 1  77 1 st,   \ 3103 1 M  Geburtsdatum
+  3104 1  75 1 st,   \ 3104 1 K  Titel
+  3105 1 109 1 st,   \ 3105 1 m  Versichertennummer  [Regel 776]
+  3119 1 109 1 st,   \ 3119 1 m  Versicherten_ID  [Regel 776]
+  3107 1  75 1 st,   \ 3107 1 K  Straße
+  3109 1  75 1 st,   \ 3109 1 K  Hausnummer
+  3115 1  75 1 st,   \ 3115 1 K  Anschriftenzusatz
+  3112 1 109 1 st,   \ 3112 1 m  PLZ  [Regel 479]
+  3114 1 109 1 st,   \ 3114 1 m  Wohnsitzlaendercode  [Regel 784]
+  3113 1  75 1 st,   \ 3113 1 K  Ort
+  3121 1 109 1 st,   \ 3121 1 m  PostfachPLZ  [Regel 479]
+  3122 1  75 1 st,   \ 3122 1 K  PostfachOrt
+  3123 1  75 1 st,   \ 3123 1 K  Postfach
+  3124 1 109 1 st,   \ 3124 1 m  PostfachWohnsitzlaendercode  [Regel 784]
+  3116 1 109 1 st,   \ 3116 1 m  WOP  [Regel 774]
+  3108 1  77 1 st,   \ 3108 1 M  Versichertenart
+  3110 1  77 1 st,   \ 3110 1 M  Geschlecht
+  4101 1  77 1 st,   \ 4101 1 M  Quartal
+  4102 1  75 1 st,   \ 4102 1 K  Ausstellungsdatum
+  4104 1  77 1 st,   \ 4104 1 M  Abrechnungs-VKNR
+  4106 1  77 1 st,   \ 4106 1 M  Kostenträger-Abrechnungsbereich (K
+  4108 1  75 1 st,   \ 4108 1 K  Zulassungsnummer (mobiles Lesegerä
+  4109 1 109 1 st,   \ 4109 1 m  Letzter Einlesetag der Versicherte  [falls Versichertenkarte eingel]
+  4112 1  75 1 st,   \ 4112 1 K  eEB vorhanden  [Regel 895]
+  4133 1 109 1 st,   \ 4133 1 m  VersicherungsschutzBeginn  [Regel 775]
+  4110 1  75 1 st,   \ 4110 1 K  Versicherungsschutz Ende
+  4111 1  77 1 st,   \ 4111 1 M  Kostentraegerkennung
+  4134 1 109 1 st,   \ 4134 1 m  Kostentraegername  [Regel 777]
+  4131 1  77 1 st,   \ 4131 1 M  BesonderePersonengruppe
+  4132 1  77 1 st,   \ 4132 1 M  DMP_Kennzeichnung
+  4121 1  77 1 st,   \ 4121 1 M  Gebührenordnung
+  4122 1  77 1 st,   \ 4122 1 M  Abrechnungsgebiet
+  4123 1  75 1 st,   \ 4123 1 K  Personenkreis / Untersuchungskateg
+  4124 1  75 1 st,   \ 4124 1 K  SKT-Zusatzangaben
+  4125 1  75 1 st,   \ 4125 1 K  Gültigkeitszeitraum von ... bis ..
+  4126 0  75 1 st,   \ 4126 n K  SKT-Bemerkungen
+  4202 1  75 1 st,   \ 4202 1 K  Unfall, Unfallfolgen
+  4204 1  75 1 st,   \ 4204 1 K  eingeschränkter Leistungsanspruch 
+  4206 1  75 1 st,   \ 4206 1 K  Mutm. Tag der Entbindung
+  4234 1  75 1 st,   \ 4234 1 K  anerkannte Psychotherapie
+  4235 0  80 2 st,   \   4235 n P  Datum des Anerkennungsbescheides
+  4299 1 107 3 st,   \     4299 1 k  Lebenslange Arztnummer (LANR) des 
+  4247 1  75 3 st,   \     4247 1 K  Antragsdatum (des Anerkennungsesch
+  4250 1 107 3 st,   \     4250 1 k  Kombinationsbehandlung aus Einzelu
+  4251 1  80 4 st,   \       4251 1 P  Durchführungsart der Kombinationsb
+  4252 1 107 3 st,   \     4252 1 k  Gesamtanzahl bewilligter Therapiee  [Regel 850 Regel 852 Regel 897]
+  4253 0 107 3 st,   \     4253 n k  Bewilligte GOP für den Versicherte  [Regel 850 Regel 853 Regel 897]
+  4254 1  80 4 st,   \       4254 1 P  Anzahl der abgerechneten GOPen für
+  4255 1 107 3 st,   \     4255 1 k  Gesamtanzahl bewilligter Therapiee  [Regel 851 Regel 852]
+  4256 0 107 3 st,   \     4256 n k  Bewilligte GOP für die Bezugsperso  [Regel 851 Regel 853]
+  4257 1  80 4 st,   \       4257 1 P  Anzahl der abgerechneten GOPen für
+  4236 1  75 1 st,   \ 4236 1 K  Abklärung somatischer Ursachen vor
+  4239 1  77 1 st,   \ 4239 1 M  Scheinuntergruppe
+  4103 1  75 1 st,   \ 4103 1 K  Vermittlungs-/Kontaktart  [Regel 870 Regel 877]
+  4114 1 107 2 st,   \   4114 1 k  Vermittlungscode
+  4115 1 107 2 st,   \   4115 1 k  Tag der Terminvermittlung  [Regel 877 Regel 886 Regel 887]
+  4105 0 107 2 st,   \   4105 n k  Ergänzende Informationen zur Vermi
   5000 0  77 1 st,   \ 5000 n M  Leistungstag
-  5001 0 109 1 st,   \ 5001 n m  Gebührennummer (GNR)
-  5002 1 107 1 st,   \ 5002 1 k  Art der Untersuchung
-  5003 1 107 1 st,   \ 5003 1 k  (N)BSNR des vermittelten Facharztes
-  5005 1 107 1 st,   \ 5005 1 k  Multiplikator
-  5006 1 107 1 st,   \ 5006 1 k  Um-Uhrzeit
-  5008 1 107 1 st,   \ 5008 1 k  DKM
-  5009 0 107 1 st,   \ 5009 n k  freier Begründungstext
-  5010 1 109 1 st,   \ 5010 1 m  Chargennummer
-  5012 0 107 1 st,   \ 5012 n k  Sachkosten / Materialkosten in Cent
-  5011 0 109 1 st,   \ 5011 n m  Sachkosten-Bezeichnung
-  5074 1 107 1 st,   \ 5074 1 k  Name Hersteller/ Lieferant
-  5075 1 107 1 st,   \ 5075 1 k  Artikel-/ Modellnummer
-  5076 1 107 1 st,   \ 5076 1 k  Rechnungsnummer
-  5013 1 107 1 st,   \ 5013 1 k  Prozent der Leistung
-  5015 0 107 1 st,   \ 5015 n k  Organ
-  5016 0 107 1 st,   \ 5016 n k  Name des Arztes
-  5017 1 107 1 st,   \ 5017 1 k  Besuchsort bei Hausbesuchen
-  5018 1 107 1 st,   \ 5018 1 k  Zone bei Besuchen
-  5019 1 107 1 st,   \ 5019 1 k  Erbringungsort / Standort des Gerätes
-  5020 1 107 1 st,   \ 5020 1 k  Wiederholungsuntersuchung
-  5021 1 107 1 st,   \ 5021 1 k  Jahr der letzten Krebsfrüherkennungs-unt
-  5023 1 107 1 st,   \ 5023 1 k  GO-Nummern-Zusatz
-  5024 1 107 1 st,   \ 5024 1 k  GNR-Zusatzkennzeichen für poststationär 
-  5025 1 107 1 st,   \ 5025 1 k  Aufnahmedatum
-  5026 1 107 1 st,   \ 5026 1 k  Entlassungsdatum
-  5034 1 107 1 st,   \ 5034 1 k  OP-Datum
-  5035 0 107 1 st,   \ 5035 n k  OP-Schlüssel
-  5041 1 107 1 st,   \ 5041 1 k  Seitenlokalisation OPS
-  5036 0 107 1 st,   \ 5036 n k  GNR als Begründung
-  5037 1 109 1 st,   \ 5037 1 m  Gesamt-SchnittNaht-Zeit (Minuten)
-  5038 0 107 1 st,   \ 5038 n k  Komplikation
-  5040 1 107 1 st,   \ 5040 1 k  Patientennummer der eDokumentation Hautk
-  5050 0 109 1 st,   \ 5050 n m  Melde-ID Implantateregister
-  5051 1 109 1 st,   \ 5051 1 m  Hash-String Implantate-register
-  5052 1 109 1 st,   \ 5052 1 m  Hash-Wert Implantateregister
-  5042 1 107 1 st,   \ 5042 1 k  Mengenangabe Kontrast-/Arzneimittel
-  5043 1 109 1 st,   \ 5043 1 m  Maßeinheit Kontrast-/Arzneimittel
-  5077 0 109 1 st,   \ 5077 n m  HGNC-Gensymbol
-  5078 0 109 1 st,   \ 5078 n m  Gen-Name
-  5079 0 109 1 st,   \ 5079 n m  Art der Erkrankung
-  5098 1 109 1 st,   \ 5098 1 m  (N)BSNR des Ortes der Leistungserbringun
-  5102 1 109 1 st,   \ 5102 1 m  Krankenhaus-IK (im Rahmen der ASVAbrechn
-  5099 1 109 1 st,   \ 5099 1 m  Lebenslange Arztnummer (LANR) des Vertra
-  5101 1 109 1 st,   \ 5101 1 m  Pseudo-LANR (für Krankenhausärzte im Rah
-  5100 1  75 1 st,   \ 5100 1 K  ASV-Teamnummer des Vertragsarztes
-  6001 0 109 2 st,   \ 6001 n m  ICD-Code
-  6003 1 109 2 st,   \ 6003 1 m  Diagnosensicherheit
-  6004 1 107 2 st,   \ 6004 1 k  Seitenlokalisation
-  6006 0 107 2 st,   \ 6006 n k  Diagnosenerläuterung
-  6008 0 109 2 st,   \ 6008 n m  Diagnosenausnahmetatbestand
-  3673 0 109 3 st,   \ 3673 n m  Dauerdiagnose (ICDCode)
-  3674 1 109 3 st,   \ 3674 1 m  Diagnosensicherheit Dauerdiagnose
-  3675 1 107 3 st,   \ 3675 1 k  Seitenlokalisation Dauerdiagnose
-  3676 0 107 3 st,   \ 3676 n k  Diagnosenerläuterung Dauerdiagnose
-  3677 0 109 3 st,   \ 3677 n m  Diagnosenausnahmetatbestand Dauerdiagnos
+  5001 0  80 2 st,   \   5001 n P  Gebührennummer (GNR)
+  5002 1 107 3 st,   \     5002 1 k  Art der Untersuchung
+  5003 1 107 3 st,   \     5003 1 k  (N)BSNR des vermittelten Facharzte
+  5005 1 107 3 st,   \     5005 1 k  Multiplikator  [Regel 894]
+  5006 1 107 3 st,   \     5006 1 k  Um-Uhrzeit
+  5008 1 107 3 st,   \     5008 1 k  DKM
+  5009 0 107 3 st,   \     5009 n k  freier Begründungstext
+  5010 1 109 3 st,   \     5010 1 m  Chargennummer  [Regel 868]
+  5012 0 107 3 st,   \     5012 n k  Sachkosten / Materialkosten in Cen
+  5011 0  80 4 st,   \       5011 n P  Sachkosten-Bezeichnung
+  5074 1 107 4 st,   \       5074 1 k  Name Hersteller/ Lieferant
+  5075 1 107 4 st,   \       5075 1 k  Artikel-/ Modellnummer
+  5076 1 107 4 st,   \       5076 1 k  Rechnungsnummer
+  5013 1 107 3 st,   \     5013 1 k  Prozent der Leistung
+  5015 0 107 3 st,   \     5015 n k  Organ
+  5016 0 107 3 st,   \     5016 n k  Name des Arztes
+  5017 1 107 3 st,   \     5017 1 k  Besuchsort bei Hausbesuchen
+  5018 1 107 3 st,   \     5018 1 k  Zone bei Besuchen
+  5019 1 107 3 st,   \     5019 1 k  Erbringungsort / Standort des Gerä
+  5020 1 107 3 st,   \     5020 1 k  Wiederholungsuntersuchung
+  5021 1 107 4 st,   \       5021 1 k  Jahr der letzten Krebsfrüherkennun
+  5023 1 107 3 st,   \     5023 1 k  GO-Nummern-Zusatz
+  5024 1 107 3 st,   \     5024 1 k  GNR-Zusatzkennzeichen für poststat
+  5025 1 107 3 st,   \     5025 1 k  Aufnahmedatum
+  5026 1 107 3 st,   \     5026 1 k  Entlassungsdatum
+  5034 1 107 3 st,   \     5034 1 k  OP-Datum
+  5035 0 107 3 st,   \     5035 n k  OP-Schlüssel
+  5041 1 107 4 st,   \       5041 1 k  Seitenlokalisation OPS  [Regel 706]
+  5036 0 107 3 st,   \     5036 n k  GNR als Begründung
+  5037 1 109 3 st,   \     5037 1 m  Gesamt-Schnitt-Naht-Zeit (Minuten)  [Simultaneingriff]
+  5038 0 107 3 st,   \     5038 n k  Komplikation
+  5040 1 107 3 st,   \     5040 1 k  Patientennummer der eDokumentation
+  5050 0 109 3 st,   \     5050 n m  Melde-ID Implantateregister  [Regel 888 Regel 894]
+  5051 1 109 4 st,   \       5051 1 m  Hash-String Implantate-register  [Regel 889]
+  5052 1 109 4 st,   \       5052 1 m  Hash-Wert Implantateregister  [Regel 890]
+  5042 1 107 3 st,   \     5042 1 k  Mengenangabe Kontrast-/Arzneimitte
+  5043 1  80 4 st,   \       5043 1 P  Maßeinheit Kontrast-/Arzneimittel
+  5077 0 109 3 st,   \     5077 n m  HGNC-Gensymbol  [Regel 770 Regel 816 Regel 828 ]
+  5078 0 109 4 st,   \       5078 n m  Gen-Name  [Regel 816]
+  5079 0 109 3 st,   \     5079 n m  Art der Erkrankung  [Regel 770 Regel 816 Regel 828 ]
+  5098 1 109 3 st,   \     5098 1 m  (N)BSNR des Ortes der Leistungserb  [Regel 859]
+  5102 1 109 3 st,   \     5102 1 m  Krankenhaus-IK (im Rahmen der ASV-  [Regel 859]
+  5099 1 109 3 st,   \     5099 1 m  Lebenslange Arztnummer (LANR) des   [Regel 837]
+  5101 1 109 3 st,   \     5101 1 m  Pseudo-LANR (für Krankenhausärzte   [Regel 837]
+  5100 1  75 3 st,   \     5100 1 K  ASV-Teamnummer des Vertragsarztes
+  6001 0 109 1 st,   \ 6001 n m  ICD-Code  [Regel 486 Regel 828 Regel 829 ]
+  6003 1  80 2 st,   \   6003 1 P  Diagnosensicherheit
+  6004 1 107 2 st,   \   6004 1 k  Seitenlokalisation
+  6006 0 107 2 st,   \   6006 n k  Diagnosenerläuterung
+  6008 0 109 2 st,   \   6008 n m  Diagnosenausnahmetatbestand  [Regel 491]
+  3673 0 109 1 st,   \ 3673 n m  Dauerdiagnose (ICD-Code)  [Regel 486]
+  3674 1  80 2 st,   \   3674 1 P  Diagnosensicherheit Dauerdiagnose
+  3675 1 107 2 st,   \   3675 1 k  Seitenlokalisation Dauerdiagnose
+  3676 0 107 2 st,   \   3676 n k  Diagnosenerläuterung Dauerdiagnose
+  3677 0 109 2 st,   \   3677 n m  Diagnosenausnahmetatbestand Dauerd  [Regel 491]
   0 0 0 0 st,
 create st-0102
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
-  3000 1  75 0 st,   \ 3000 1 K  Patientennummer
-  3003 1  75 0 st,   \ 3003 1 K  Schein-ID
-  3006 1 109 0 st,   \ 3006 1 m  CDM Version
-  3010 1 109 0 st,   \ 3010 1 m  Datum und Uhrzeit der Onlineprüfung und 
-  3011 1 109 0 st,   \ 3011 1 m  Ergebnis der Onlineprüfung und -aktualis
-  3012 1 107 0 st,   \ 3012 1 k  Error-Code
-  3013 1 107 0 st,   \ 3013 1 k  Prüfziffer des Fachdienstes
-  3100 1  75 0 st,   \ 3100 1 K  Namenszusatz
-  3120 1  75 0 st,   \ 3120 1 K  Vorsatzwort
-  3101 1  77 0 st,   \ 3101 1 M  Name
-  3102 1  77 0 st,   \ 3102 1 M  Vorname
-  3103 1  77 0 st,   \ 3103 1 M  Geburtsdatum
-  3104 1  75 0 st,   \ 3104 1 K  Titel
-  3105 1 109 0 st,   \ 3105 1 m  Versichertennummer
-  3119 1 109 0 st,   \ 3119 1 m  Versicherten_ID
-  3107 1  75 0 st,   \ 3107 1 K  Straße
-  3109 1  75 0 st,   \ 3109 1 K  Hausnummer
-  3115 1  75 0 st,   \ 3115 1 K  Anschriftenzusatz
-  3112 1 109 0 st,   \ 3112 1 m  PLZ
-  3114 1 109 0 st,   \ 3114 1 m  Wohnsitzlaendercode
-  3113 1  75 0 st,   \ 3113 1 K  Ort
-  3121 1 109 0 st,   \ 3121 1 m  PostfachPLZ
-  3122 1  75 0 st,   \ 3122 1 K  PostfachOrt
-  3123 1  75 0 st,   \ 3123 1 K  Postfach
-  3124 1 109 0 st,   \ 3124 1 m  PostfachWohnsitzlaendercode
-  3116 1 109 0 st,   \ 3116 1 m  WOP
-  3108 1  77 0 st,   \ 3108 1 M  Versichertenart
-  3110 1  77 0 st,   \ 3110 1 M  Geschlecht
-  4101 1  77 0 st,   \ 4101 1 M  Quartal
-  4102 1 109 0 st,   \ 4102 1 m  Ausstellungsdatum
-  4104 1  77 0 st,   \ 4104 1 M  Abrechnungs-VKNR
-  4106 1  77 0 st,   \ 4106 1 M  Kostenträger-Abrechnungsbereich (KTAB)
-  4108 1  75 0 st,   \ 4108 1 K  Zulassungsnummer (mobiles Lesegerät)
-  4109 1 109 0 st,   \ 4109 1 m  Letzter Einlesetag der Versichertenkarte
-  4112 1  75 0 st,   \ 4112 1 K  eEB vorhanden
-  4133 1 109 0 st,   \ 4133 1 m  VersicherungsschutzBeginn
-  4110 1  75 0 st,   \ 4110 1 K  Versicherungsschutz Ende
-  4111 1  77 0 st,   \ 4111 1 M  Kostentraegerkennung
-  4134 1 109 0 st,   \ 4134 1 m  Kostentraegername
-  4131 1  77 0 st,   \ 4131 1 M  BesonderePersonengruppe
-  4132 1  77 0 st,   \ 4132 1 M  DMP_Kennzeichnung
-  4121 1  77 0 st,   \ 4121 1 M  Gebührenordnung
-  4122 1  77 0 st,   \ 4122 1 M  Abrechnungsgebiet
-  4123 1  75 0 st,   \ 4123 1 K  Personenkreis / Untersuchungskategorie
-  4124 1  75 0 st,   \ 4124 1 K  SKT-Zusatzangaben
-  4125 1  75 0 st,   \ 4125 1 K  Gültigkeitszeitraum von ... bis ...
-  4126 0  75 0 st,   \ 4126 n K  SKT-Bemerkungen
-  4202 1  75 0 st,   \ 4202 1 K  Unfall, Unfallfolgen
-  4204 1  75 0 st,   \ 4204 1 K  eingeschränkter Leistungsanspruch gemäß 
-  4205 0 109 0 st,   \ 4205 n m  Auftrag
-  4206 1  75 0 st,   \ 4206 1 K  Mutm. Tag der Entbindung
-  4207 0  75 0 st,   \ 4207 n K  Diagnose/ Verdachtsdiagnose
-  4208 0  75 0 st,   \ 4208 n K  Befund/Medikation
-  4209 0 107 0 st,   \ 4209 n k  Zusätzliche Angaben zu Untersuchungen
-  4214 1 109 0 st,   \ 4214 1 m  Behandlungstag bei IVD-Leistungen
-  4217 1 107 0 st,   \ 4217 1 k  (N)BSNR des Erstveranlassers
-  4241 1 109 0 st,   \ 4241 1 m  Lebenslange Arztnummer (LANR) des Erstve
-  4225 1 107 0 st,   \ 4225 1 k  ASV-Teamnummer des Erstveranlassers
-  4241 1 109 0 st,   \ 4241 1 m  Lebenslange Arztnummer (LANR) des Erstve
-  4248 1 109 0 st,   \ 4248 1 m  Pseudo-LANR (für Krankenhausärzte im Rah
-  4218 1 109 0 st,   \ 4218 1 m  (N)BSNR des Überweisers
-  4242 1 109 0 st,   \ 4242 1 m  Lebenslange Arztnummer des Überweisers
-  4226 1 109 0 st,   \ 4226 1 m  ASV-Teamnummer des Überweisers
-  4242 1 109 0 st,   \ 4242 1 m  Lebenslange Arztnummer des Überweisers
-  4249 1 109 0 st,   \ 4249 1 m  Pseudo-LANR (für Krankenhausärzte im Rah
-  4219 1 109 0 st,   \ 4219 1 m  Überweisung von anderen Ärzten
-  4220 1 109 0 st,   \ 4220 1 m  Überweisung an
-  4221 1 109 0 st,   \ 4221 1 m  Kurativ / Präventiv / ESS / bei belegärz
-  4229 1 107 0 st,   \ 4229 1 k  Ausnahmeindikation
-  4234 1  75 0 st,   \ 4234 1 K  anerkannte Psychotherapie
-  4235 0 109 0 st,   \ 4235 n m  Datum des Anerkennungsbescheides
-  4299 1 107 0 st,   \ 4299 1 k  Lebenslange Arztnummer (LANR) des Vertra
-  4247 1  75 0 st,   \ 4247 1 K  Antragsdatum (des Anerkennungsescheides)
-  4250 1 107 0 st,   \ 4250 1 k  Kombinationsbehandlung aus Einzelund Gru
-  4251 1 109 0 st,   \ 4251 1 m  Durchführungsart der Kombinationsbehandl
-  4252 1 107 0 st,   \ 4252 1 k  Gesamtanzahl bewilligter Therapieeinheit
-  4253 0 107 0 st,   \ 4253 n k  Bewilligte GOP für den Versicherten
-  4254 1 109 0 st,   \ 4254 1 m  Anzahl der abgerechneten GOPen für den V
-  4255 1 107 0 st,   \ 4255 1 k  Gesamtanzahl bewilligter Therapieeinheit
-  4256 0 107 0 st,   \ 4256 n k  Bewilligte GOP für die Bezugsperson
-  4257 1 109 0 st,   \ 4257 1 m  Anzahl der abgerechneten GOPen für die B
-  4239 1  77 0 st,   \ 4239 1 M  Scheinuntergruppe
-  4103 1  75 0 st,   \ 4103 1 K  Vermittlungs-/Kontaktart
-  4114 1 107 0 st,   \ 4114 1 k  Vermittlungscode
-  4115 1 107 0 st,   \ 4115 1 k  Tag der Terminvermittlung
-  4105 0 107 0 st,   \ 4105 n k  Ergänzende Informationen zur Vermittlung
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
+  3000 1  75 1 st,   \ 3000 1 K  Patientennummer
+  3003 1  75 1 st,   \ 3003 1 K  Schein-ID
+  3006 1 109 1 st,   \ 3006 1 m  CDM Version  [Regel 307]
+  3010 1 109 1 st,   \ 3010 1 m  Datum und Uhrzeit der Onlineprüfun  [falls eGK eingelesen wurde und]
+  3011 1  80 2 st,   \   3011 1 P  Ergebnis der Onlineprüfung und -ak
+  3012 1 107 2 st,   \   3012 1 k  Error-Code
+  3013 1 107 2 st,   \   3013 1 k  Prüfziffer des Fachdienstes
+  3100 1  75 1 st,   \ 3100 1 K  Namenszusatz
+  3120 1  75 1 st,   \ 3120 1 K  Vorsatzwort
+  3101 1  77 1 st,   \ 3101 1 M  Name
+  3102 1  77 1 st,   \ 3102 1 M  Vorname
+  3103 1  77 1 st,   \ 3103 1 M  Geburtsdatum
+  3104 1  75 1 st,   \ 3104 1 K  Titel
+  3105 1 109 1 st,   \ 3105 1 m  Versichertennummer  [Regel 776]
+  3119 1 109 1 st,   \ 3119 1 m  Versicherten_ID  [Regel 776]
+  3107 1  75 1 st,   \ 3107 1 K  Straße
+  3109 1  75 1 st,   \ 3109 1 K  Hausnummer
+  3115 1  75 1 st,   \ 3115 1 K  Anschriftenzusatz
+  3112 1 109 1 st,   \ 3112 1 m  PLZ  [Regel 479]
+  3114 1 109 1 st,   \ 3114 1 m  Wohnsitzlaendercode  [Regel 784]
+  3113 1  75 1 st,   \ 3113 1 K  Ort
+  3121 1 109 1 st,   \ 3121 1 m  PostfachPLZ  [Regel 479]
+  3122 1  75 1 st,   \ 3122 1 K  PostfachOrt
+  3123 1  75 1 st,   \ 3123 1 K  Postfach
+  3124 1 109 1 st,   \ 3124 1 m  PostfachWohnsitzlaendercode  [Regel 784]
+  3116 1 109 1 st,   \ 3116 1 m  WOP  [Regel 774]
+  3108 1  77 1 st,   \ 3108 1 M  Versichertenart
+  3110 1  77 1 st,   \ 3110 1 M  Geschlecht
+  4101 1  77 1 st,   \ 4101 1 M  Quartal
+  4102 1 109 1 st,   \ 4102 1 m  Ausstellungsdatum  [Regel 405 Regel 406]
+  4104 1  77 1 st,   \ 4104 1 M  Abrechnungs-VKNR
+  4106 1  77 1 st,   \ 4106 1 M  Kostenträger-Abrechnungsbereich (K
+  4108 1  75 1 st,   \ 4108 1 K  Zulassungsnummer (mobiles Lesegerä
+  4109 1 109 1 st,   \ 4109 1 m  Letzter Einlesetag der Versicherte  [falls Versichertenkarte eingel]
+  4112 1  75 1 st,   \ 4112 1 K  eEB vorhanden  [Regel 895]
+  4133 1 109 1 st,   \ 4133 1 m  VersicherungsschutzBeginn  [Regel 775]
+  4110 1  75 1 st,   \ 4110 1 K  Versicherungsschutz Ende
+  4111 1  77 1 st,   \ 4111 1 M  Kostentraegerkennung
+  4134 1 109 1 st,   \ 4134 1 m  Kostentraegername  [Regel 777]
+  4131 1  77 1 st,   \ 4131 1 M  BesonderePersonengruppe
+  4132 1  77 1 st,   \ 4132 1 M  DMP_Kennzeichnung
+  4121 1  77 1 st,   \ 4121 1 M  Gebührenordnung
+  4122 1  77 1 st,   \ 4122 1 M  Abrechnungsgebiet
+  4123 1  75 1 st,   \ 4123 1 K  Personenkreis / Untersuchungskateg
+  4124 1  75 1 st,   \ 4124 1 K  SKT-Zusatzangaben
+  4125 1  75 1 st,   \ 4125 1 K  Gültigkeitszeitraum von ... bis ..
+  4126 0  75 1 st,   \ 4126 n K  SKT-Bemerkungen
+  4202 1  75 1 st,   \ 4202 1 K  Unfall, Unfallfolgen
+  4204 1  75 1 st,   \ 4204 1 K  eingeschränkter Leistungsanspruch 
+  4205 0 109 1 st,   \ 4205 n m  Auftrag  [Regel 744 Regel 755]
+  4206 1  75 1 st,   \ 4206 1 K  Mutm. Tag der Entbindung
+  4207 0  75 1 st,   \ 4207 n K  Diagnose/ Verdachtsdiagnose
+  4208 0  75 1 st,   \ 4208 n K  Befund/Medikation
+  4209 0 107 1 st,   \ 4209 n k  Zusätzliche Angaben zu Untersuchun  [Regel 756]
+  4214 1 109 1 st,   \ 4214 1 m  Behandlungstag bei IVD-Leistungen  [Regel 901]
+  4217 1 107 1 st,   \ 4217 1 k  (N)BSNR des Erstveranlassers  [Regel 431]
+  4241 1  80 2 st,   \   4241 1 P  Lebenslange Arztnummer (LANR) des 
+  4225 1 107 1 st,   \ 4225 1 k  ASV-Teamnummer des Erstveranlasser  [Regel 431]
+  4241 1 109 2 st,   \   4241 1 m  Lebenslange Arztnummer (LANR) des   [Regel 844]
+  4248 1 109 2 st,   \   4248 1 m  Pseudo-LANR (für Krankenhausärzte   [Regel 844]
+  4218 1 109 1 st,   \ 4218 1 m  (N)BSNR des Überweisers  [Regel 328]
+  4242 1  80 2 st,   \   4242 1 P  Lebenslange Arztnummer des Überwei
+  4226 1 109 1 st,   \ 4226 1 m  ASV-Teamnummer des Überweisers  [Regel 328]
+  4242 1 109 2 st,   \   4242 1 m  Lebenslange Arztnummer des Überwei  [Regel 845]
+  4249 1 109 2 st,   \   4249 1 m  Pseudo-LANR (für Krankenhausärzte   [Regel 845]
+  4219 1 109 1 st,   \ 4219 1 m  Überweisung von anderen Ärzten  [Regel 328]
+  4220 1 109 1 st,   \ 4220 1 m  Überweisung an  [Regel 320]
+  4221 1 109 1 st,   \ 4221 1 m  Kurativ / Präventiv / ESS / bei be  [Regel 404]
+  4229 1 107 1 st,   \ 4229 1 k  Ausnahmeindikation  [Regel 432]
+  4234 1  75 1 st,   \ 4234 1 K  anerkannte Psychotherapie
+  4235 0  80 2 st,   \   4235 n P  Datum des Anerkennungsbescheides
+  4299 1 107 3 st,   \     4299 1 k  Lebenslange Arztnummer (LANR) des 
+  4247 1  75 3 st,   \     4247 1 K  Antragsdatum (des Anerkennungsesch
+  4250 1 107 3 st,   \     4250 1 k  Kombinationsbehandlung aus Einzelu
+  4251 1  80 4 st,   \       4251 1 P  Durchführungsart der Kombinationsb
+  4252 1 107 3 st,   \     4252 1 k  Gesamtanzahl bewilligter Therapiee  [Regel 850 Regel 852 Regel 897]
+  4253 0 107 3 st,   \     4253 n k  Bewilligte GOP für den Versicherte  [Regel 850 Regel 853 Regel 897]
+  4254 1  80 4 st,   \       4254 1 P  Anzahl der abgerechneten GOPen für
+  4255 1 107 3 st,   \     4255 1 k  Gesamtanzahl bewilligter Therapiee  [Regel 851 Regel 852]
+  4256 0 107 3 st,   \     4256 n k  Bewilligte GOP für die Bezugsperso  [Regel 851 Regel 853]
+  4257 1  80 4 st,   \       4257 1 P  Anzahl der abgerechneten GOPen für
+  4239 1  77 1 st,   \ 4239 1 M  Scheinuntergruppe
+  4103 1  75 1 st,   \ 4103 1 K  Vermittlungs-/Kontaktart  [Regel 870 Regel 877]
+  4114 1 107 2 st,   \   4114 1 k  Vermittlungscode
+  4115 1 107 2 st,   \   4115 1 k  Tag der Terminvermittlung  [Regel 877 Regel 886 Regel 887]
+  4105 0 107 2 st,   \   4105 n k  Ergänzende Informationen zur Vermi
   5000 0  77 1 st,   \ 5000 n M  Leistungstag
-  5001 0 109 1 st,   \ 5001 n m  Gebührennummer (GNR)
-  5002 1 107 1 st,   \ 5002 1 k  Art der Untersuchung
-  5003 1 107 1 st,   \ 5003 1 k  (N)BSNR des vermittelten Facharztes
-  5005 1 107 1 st,   \ 5005 1 k  Multiplikator
-  5006 1 107 1 st,   \ 5006 1 k  Um-Uhrzeit
-  5008 1 107 1 st,   \ 5008 1 k  DKM
-  5009 0 107 1 st,   \ 5009 n k  freier Begründungstext
-  5010 1 109 1 st,   \ 5010 1 m  Chargennummer
-  5012 0 107 1 st,   \ 5012 n k  Sachkosten / Materialkosten in Cent
-  5011 0 109 1 st,   \ 5011 n m  Sachkosten-Bezeichnung
-  5074 1 107 1 st,   \ 5074 1 k  Name Hersteller/ Lieferant
-  5075 1 107 1 st,   \ 5075 1 k  Artikel-/ Modellnummer
-  5076 1 107 1 st,   \ 5076 1 k  Rechnungsnummer
-  5013 1 107 1 st,   \ 5013 1 k  Prozent der Leistung
-  5015 0 107 1 st,   \ 5015 n k  Organ
-  5016 0 107 1 st,   \ 5016 n k  Name des Arztes
-  5017 1 107 1 st,   \ 5017 1 k  Besuchsort bei Hausbesuchen
-  5018 1 107 1 st,   \ 5018 1 k  Zone bei Besuchen
-  5019 1 107 1 st,   \ 5019 1 k  Erbringungsort / Standort des Gerätes
-  5020 1 107 1 st,   \ 5020 1 k  Wiederholungsuntersuchung
-  5021 1 107 1 st,   \ 5021 1 k  Jahr der letzten Krebsfrüherkennungs-unt
-  5023 1 107 1 st,   \ 5023 1 k  GO-Nummern-Zusatz
-  5024 1 107 1 st,   \ 5024 1 k  GNR-Zusatzkennzeichen für poststationär 
-  5025 1 107 1 st,   \ 5025 1 k  Aufnahmedatum
-  5026 1 107 1 st,   \ 5026 1 k  Entlassungsdatum
-  5034 1 107 1 st,   \ 5034 1 k  OP-Datum
-  5035 0 107 1 st,   \ 5035 n k  OP-Schlüssel
-  5041 1 107 1 st,   \ 5041 1 k  Seitenlokalisation OPS
-  5036 0 107 1 st,   \ 5036 n k  GNR als Begründung
-  5037 1 109 1 st,   \ 5037 1 m  Gesamt-SchnittNaht-Zeit (Minuten)
-  5038 0 107 1 st,   \ 5038 n k  Komplikation
-  5040 1 107 1 st,   \ 5040 1 k  Patientennummer der eDokumentation Hautk
-  5050 0 109 1 st,   \ 5050 n m  Melde-ID Implantateregister
-  5051 1 109 1 st,   \ 5051 1 m  Hash-String Implantate-register
-  5052 1 109 1 st,   \ 5052 1 m  Hash-Wert Implantateregister
-  5042 1 107 1 st,   \ 5042 1 k  Mengenangabe Kontrast-/Arzneimittel
-  5043 1 109 1 st,   \ 5043 1 m  Maßeinheit Kontrast-/Arzneimittel
-  5077 0 109 1 st,   \ 5077 n m  HGNC-Gensymbol
-  5078 0 109 1 st,   \ 5078 n m  Gen-Name
-  5079 0 109 1 st,   \ 5079 n m  Art der Erkrankung
-  5098 1 109 1 st,   \ 5098 1 m  (N)BSNR des Ortes der Leistungserbringun
-  5102 1 109 1 st,   \ 5102 1 m  Krankenhaus-IK (im Rahmen der ASVAbrechn
-  5099 1 109 1 st,   \ 5099 1 m  Lebenslange Arztnummer (LANR) des Vertra
-  5101 1 109 1 st,   \ 5101 1 m  Pseudo-LANR (für Krankenhausärzte im Rah
-  5100 1  75 1 st,   \ 5100 1 K  ASV-Teamnummer des Vertragsarztes
-  6001 0 109 2 st,   \ 6001 n m  ICD-Code
-  6003 1 109 2 st,   \ 6003 1 m  Diagnosensicherheit
-  6004 1 107 2 st,   \ 6004 1 k  Seitenlokalisation
-  6006 0 107 2 st,   \ 6006 n k  Diagnosenerläuterung
-  6008 0 109 2 st,   \ 6008 n m  Diagnosenausnahmetatbestand
-  3673 0 109 3 st,   \ 3673 n m  Dauerdiagnose (ICDCode)
-  3674 1 109 3 st,   \ 3674 1 m  Diagnosensicherheit Dauerdiagnose
-  3675 1 107 3 st,   \ 3675 1 k  Seitenlokalisation Dauerdiagnose
-  3676 0 107 3 st,   \ 3676 n k  Diagnosenerläuterung Dauerdiagnose
-  3677 0 109 3 st,   \ 3677 n m  Diagnosenausnahmetatbestand Dauerdiagnos
+  5001 0  80 2 st,   \   5001 n P  Gebührennummer (GNR)
+  5002 1 107 3 st,   \     5002 1 k  Art der Untersuchung
+  5003 1 107 3 st,   \     5003 1 k  (N)BSNR des vermittelten Facharzte
+  5005 1 107 3 st,   \     5005 1 k  Multiplikator  [Regel 894]
+  5006 1 107 3 st,   \     5006 1 k  Um-Uhrzeit
+  5008 1 107 3 st,   \     5008 1 k  DKM
+  5009 0 107 3 st,   \     5009 n k  freier Begründungstext
+  5010 1 109 3 st,   \     5010 1 m  Chargennummer  [Regel 868]
+  5012 0 107 3 st,   \     5012 n k  Sachkosten / Materialkosten in Cen
+  5011 0  80 4 st,   \       5011 n P  Sachkosten-Bezeichnung
+  5074 1 107 4 st,   \       5074 1 k  Name Hersteller/ Lieferant
+  5075 1 107 4 st,   \       5075 1 k  Artikel-/ Modellnummer
+  5076 1 107 4 st,   \       5076 1 k  Rechnungsnummer
+  5013 1 107 3 st,   \     5013 1 k  Prozent der Leistung
+  5015 0 107 3 st,   \     5015 n k  Organ
+  5016 0 107 3 st,   \     5016 n k  Name des Arztes
+  5017 1 107 3 st,   \     5017 1 k  Besuchsort bei Hausbesuchen
+  5018 1 107 3 st,   \     5018 1 k  Zone bei Besuchen
+  5019 1 107 3 st,   \     5019 1 k  Erbringungsort / Standort des Gerä
+  5020 1 107 3 st,   \     5020 1 k  Wiederholungsuntersuchung
+  5021 1 107 4 st,   \       5021 1 k  Jahr der letzten Krebsfrüherkennun
+  5023 1 107 3 st,   \     5023 1 k  GO-Nummern-Zusatz
+  5024 1 107 3 st,   \     5024 1 k  GNR-Zusatzkennzeichen für poststat
+  5025 1 107 3 st,   \     5025 1 k  Aufnahmedatum
+  5026 1 107 3 st,   \     5026 1 k  Entlassungsdatum
+  5034 1 107 3 st,   \     5034 1 k  OP-Datum
+  5035 0 107 3 st,   \     5035 n k  OP-Schlüssel
+  5041 1 107 4 st,   \       5041 1 k  Seitenlokalisation OPS  [Regel 706]
+  5036 0 107 3 st,   \     5036 n k  GNR als Begründung
+  5037 1 109 3 st,   \     5037 1 m  Gesamt-Schnitt-Naht-Zeit (Minuten)  [Simultaneingriff]
+  5038 0 107 3 st,   \     5038 n k  Komplikation
+  5040 1 107 3 st,   \     5040 1 k  Patientennummer der eDokumentation
+  5050 0 109 3 st,   \     5050 n m  Melde-ID Implantateregister  [Regel 888 Regel 894]
+  5051 1 109 4 st,   \       5051 1 m  Hash-String Implantate-register  [Regel 889]
+  5052 1 109 4 st,   \       5052 1 m  Hash-Wert Implantateregister  [Regel 890]
+  5042 1 107 3 st,   \     5042 1 k  Mengenangabe Kontrast-/Arzneimitte
+  5043 1  80 4 st,   \       5043 1 P  Maßeinheit Kontrast-/Arzneimittel
+  5077 0 109 3 st,   \     5077 n m  HGNC-Gensymbol  [Regel 770 Regel 816 Regel 828 ]
+  5078 0 109 4 st,   \       5078 n m  Gen-Name  [Regel 816 Regel 891 Regel 893]
+  5079 0 109 3 st,   \     5079 n m  Art der Erkrankung  [Regel 770 Regel 816 Regel 828 ]
+  5098 1 109 3 st,   \     5098 1 m  (N)BSNR des Ortes der Leistungserb  [Regel 859]
+  5102 1 109 3 st,   \     5102 1 m  Krankenhaus-IK (im Rahmen der ASV-  [Regel 859]
+  5099 1 109 3 st,   \     5099 1 m  Lebenslange Arztnummer (LANR) des   [Regel 837]
+  5101 1 109 3 st,   \     5101 1 m  Pseudo-LANR (für Krankenhausärzte   [Regel 837]
+  5100 1  75 3 st,   \     5100 1 K  ASV-Teamnummer des Vertragsarztes
+  6001 0 109 1 st,   \ 6001 n m  ICD-Code  [Regel 486 Regel 828 Regel 829 ]
+  6003 1  80 2 st,   \   6003 1 P  Diagnosensicherheit
+  6004 1 107 2 st,   \   6004 1 k  Seitenlokalisation
+  6006 0 107 2 st,   \   6006 n k  Diagnosenerläuterung
+  6008 0 109 2 st,   \   6008 n m  Diagnosenausnahmetatbestand  [Regel 491]
+  3673 0 109 1 st,   \ 3673 n m  Dauerdiagnose (ICD-Code)  [Regel 486]
+  3674 1  80 2 st,   \   3674 1 P  Diagnosensicherheit Dauerdiagnose
+  3675 1 107 2 st,   \   3675 1 k  Seitenlokalisation Dauerdiagnose
+  3676 0 107 2 st,   \   3676 n k  Diagnosenerläuterung Dauerdiagnose
+  3677 0 109 2 st,   \   3677 n m  Diagnosenausnahmetatbestand Dauerd  [Regel 491]
   0 0 0 0 st,
 create st-0103
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
-  3000 1  75 0 st,   \ 3000 1 K  Patientennummer
-  3003 1  75 0 st,   \ 3003 1 K  Schein-ID
-  3006 1 109 0 st,   \ 3006 1 m  CDM Version
-  3010 1 109 0 st,   \ 3010 1 m  Datum und Uhrzeit der Onlineprüfung und 
-  3011 1 109 0 st,   \ 3011 1 m  Ergebnis der Onlineprüfung und -aktualis
-  3012 1 107 0 st,   \ 3012 1 k  Error-Code
-  3013 1 107 0 st,   \ 3013 1 k  Prüfziffer des Fachdienstes
-  3100 1  75 0 st,   \ 3100 1 K  Namenszusatz
-  3120 1  75 0 st,   \ 3120 1 K  Vorsatzwort
-  3101 1  77 0 st,   \ 3101 1 M  Name
-  3102 1  77 0 st,   \ 3102 1 M  Vorname
-  3103 1  77 0 st,   \ 3103 1 M  Geburtsdatum
-  3104 1  75 0 st,   \ 3104 1 K  Titel
-  3105 1 109 0 st,   \ 3105 1 m  Versichertennummer
-  3119 1 109 0 st,   \ 3119 1 m  Versicherten_ID
-  3107 1  75 0 st,   \ 3107 1 K  Straße
-  3109 1  75 0 st,   \ 3109 1 K  Hausnummer
-  3115 1  75 0 st,   \ 3115 1 K  Anschriftenzusatz
-  3112 1 109 0 st,   \ 3112 1 m  PLZ
-  3114 1 109 0 st,   \ 3114 1 m  Wohnsitzlaendercode
-  3113 1  75 0 st,   \ 3113 1 K  Ort
-  3121 1 109 0 st,   \ 3121 1 m  PostfachPLZ
-  3122 1  75 0 st,   \ 3122 1 K  PostfachOrt
-  3123 1  75 0 st,   \ 3123 1 K  Postfach
-  3124 1 109 0 st,   \ 3124 1 m  PostfachWohnsitzlaendercode
-  3116 1 109 0 st,   \ 3116 1 m  WOP
-  3108 1  77 0 st,   \ 3108 1 M  Versichertenart
-  3110 1  77 0 st,   \ 3110 1 M  Geschlecht
-  4101 1  77 0 st,   \ 4101 1 M  Quartal
-  4102 1  75 0 st,   \ 4102 1 K  Ausstellungsdatum
-  4104 1  77 0 st,   \ 4104 1 M  Abrechnungs-VKNR
-  4106 1  77 0 st,   \ 4106 1 M  Kostenträger-Abrechnungsbereich (KTAB)
-  4108 1  75 0 st,   \ 4108 1 K  Zulassungsnummer (mobiles Lesegerät)
-  4109 1 109 0 st,   \ 4109 1 m  Letzter Einlesetag der Versichertenkarte
-  4112 1  75 0 st,   \ 4112 1 K  eEB vorhanden
-  4133 1 109 0 st,   \ 4133 1 m  VersicherungsschutzBeginn
-  4110 1  75 0 st,   \ 4110 1 K  Versicherungsschutz Ende
-  4111 1  77 0 st,   \ 4111 1 M  Kostentraegerkennung
-  4134 1 109 0 st,   \ 4134 1 m  Kostentraegername
-  4131 1  77 0 st,   \ 4131 1 M  BesonderePersonengruppe
-  4132 1  77 0 st,   \ 4132 1 M  DMP_Kennzeichnung
-  4121 1  77 0 st,   \ 4121 1 M  Gebührenordnung
-  4122 1  77 0 st,   \ 4122 1 M  Abrechnungsgebiet
-  4123 1  75 0 st,   \ 4123 1 K  Personenkreis / Untersuchungskategorie
-  4124 1  75 0 st,   \ 4124 1 K  SKT-Zusatzangaben
-  4126 0  75 0 st,   \ 4126 n K  SKT-Bemerkungen
-  4202 1  75 0 st,   \ 4202 1 K  Unfall, Unfallfolgen
-  4204 1  75 0 st,   \ 4204 1 K  eingeschränkter Leistungsanspruch gemäß 
-  4205 0 109 0 st,   \ 4205 n m  Auftrag
-  4206 1  75 0 st,   \ 4206 1 K  Mutm. Tag der Entbindung
-  4207 0 109 0 st,   \ 4207 n m  Diagnose/ Verdachtsdiagnose
-  4208 0 109 0 st,   \ 4208 n m  Befund/Medikation
-  4218 1 109 0 st,   \ 4218 1 m  (N)BSNR des Überweisers
-  4242 1 109 0 st,   \ 4242 1 m  Lebenslange Arztnummer des Überweisers
-  4233 0 109 0 st,   \ 4233 n m  Stationäre Behandlung von... bis...
-  4239 1  77 0 st,   \ 4239 1 M  Scheinuntergruppe
-  4103 1  75 0 st,   \ 4103 1 K  Vermittlungs-/Kontaktart
-  4114 1 107 0 st,   \ 4114 1 k  Vermittlungscode
-  4115 1 107 0 st,   \ 4115 1 k  Tag der Terminvermittlung
-  4105 0 107 0 st,   \ 4105 n k  Ergänzende Informationen zur Vermittlung
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
+  3000 1  75 1 st,   \ 3000 1 K  Patientennummer
+  3003 1  75 1 st,   \ 3003 1 K  Schein-ID
+  3006 1 109 1 st,   \ 3006 1 m  CDM Version  [Regel 307]
+  3010 1 109 1 st,   \ 3010 1 m  Datum und Uhrzeit der Onlineprüfun  [falls eGK eingelesen wurde und]
+  3011 1  80 2 st,   \   3011 1 P  Ergebnis der Onlineprüfung und -ak
+  3012 1 107 2 st,   \   3012 1 k  Error-Code
+  3013 1 107 2 st,   \   3013 1 k  Prüfziffer des Fachdienstes
+  3100 1  75 1 st,   \ 3100 1 K  Namenszusatz
+  3120 1  75 1 st,   \ 3120 1 K  Vorsatzwort
+  3101 1  77 1 st,   \ 3101 1 M  Name
+  3102 1  77 1 st,   \ 3102 1 M  Vorname
+  3103 1  77 1 st,   \ 3103 1 M  Geburtsdatum
+  3104 1  75 1 st,   \ 3104 1 K  Titel
+  3105 1 109 1 st,   \ 3105 1 m  Versichertennummer  [Regel 776]
+  3119 1 109 1 st,   \ 3119 1 m  Versicherten_ID  [Regel 776]
+  3107 1  75 1 st,   \ 3107 1 K  Straße
+  3109 1  75 1 st,   \ 3109 1 K  Hausnummer
+  3115 1  75 1 st,   \ 3115 1 K  Anschriftenzusatz
+  3112 1 109 1 st,   \ 3112 1 m  PLZ  [Regel 479]
+  3114 1 109 1 st,   \ 3114 1 m  Wohnsitzlaendercode  [Regel 784]
+  3113 1  75 1 st,   \ 3113 1 K  Ort
+  3121 1 109 1 st,   \ 3121 1 m  PostfachPLZ  [Regel 479]
+  3122 1  75 1 st,   \ 3122 1 K  PostfachOrt
+  3123 1  75 1 st,   \ 3123 1 K  Postfach
+  3124 1 109 1 st,   \ 3124 1 m  PostfachWohnsitzlaendercode  [Regel 784]
+  3116 1 109 1 st,   \ 3116 1 m  WOP  [Regel 774]
+  3108 1  77 1 st,   \ 3108 1 M  Versichertenart
+  3110 1  77 1 st,   \ 3110 1 M  Geschlecht
+  4101 1  77 1 st,   \ 4101 1 M  Quartal
+  4102 1  75 1 st,   \ 4102 1 K  Ausstellungsdatum
+  4104 1  77 1 st,   \ 4104 1 M  Abrechnungs-VKNR
+  4106 1  77 1 st,   \ 4106 1 M  Kostenträger-Abrechnungsbereich (K
+  4108 1  75 1 st,   \ 4108 1 K  Zulassungsnummer (mobiles Lesegerä
+  4109 1 109 1 st,   \ 4109 1 m  Letzter Einlesetag der Versicherte  [falls Versichertenkarte eingel]
+  4112 1  75 1 st,   \ 4112 1 K  eEB vorhanden  [Regel 895]
+  4133 1 109 1 st,   \ 4133 1 m  VersicherungsschutzBeginn  [Regel 775]
+  4110 1  75 1 st,   \ 4110 1 K  Versicherungsschutz Ende
+  4111 1  77 1 st,   \ 4111 1 M  Kostentraegerkennung
+  4134 1 109 1 st,   \ 4134 1 m  Kostentraegername  [Regel 777]
+  4131 1  77 1 st,   \ 4131 1 M  BesonderePersonengruppe
+  4132 1  77 1 st,   \ 4132 1 M  DMP_Kennzeichnung
+  4121 1  77 1 st,   \ 4121 1 M  Gebührenordnung
+  4122 1  77 1 st,   \ 4122 1 M  Abrechnungsgebiet
+  4123 1  75 1 st,   \ 4123 1 K  Personenkreis / Untersuchungskateg
+  4124 1  75 1 st,   \ 4124 1 K  SKT-Zusatzangaben
+  4126 0  75 1 st,   \ 4126 n K  SKT-Bemerkungen
+  4202 1  75 1 st,   \ 4202 1 K  Unfall, Unfallfolgen
+  4204 1  75 1 st,   \ 4204 1 K  eingeschränkter Leistungsanspruch 
+  4205 0 109 1 st,   \ 4205 n m  Auftrag  [Regel 746]
+  4206 1  75 1 st,   \ 4206 1 K  Mutm. Tag der Entbindung
+  4207 0 109 1 st,   \ 4207 n m  Diagnose/ Verdachtsdiagnose  [Regel 746]
+  4208 0 109 1 st,   \ 4208 n m  Befund/Medikation  [Regel 746]
+  4218 1 109 1 st,   \ 4218 1 m  (N)BSNR des Überweisers  [Regel 746]
+  4242 1  80 2 st,   \   4242 1 P  Lebenslange Arztnummer des Überwei
+  4233 0 109 1 st,   \ 4233 n m  Stationäre Behandlung von... bis..  [Regel 354]
+  4239 1  77 1 st,   \ 4239 1 M  Scheinuntergruppe
+  4103 1  75 1 st,   \ 4103 1 K  Vermittlungs-/Kontaktart  [Regel 870 Regel 877]
+  4114 1 107 2 st,   \   4114 1 k  Vermittlungscode
+  4115 1 107 2 st,   \   4115 1 k  Tag der Terminvermittlung  [Regel 877 Regel 886 Regel 887]
+  4105 0 107 2 st,   \   4105 n k  Ergänzende Informationen zur Vermi
   5000 0  77 1 st,   \ 5000 n M  Leistungstag
-  5001 0 109 1 st,   \ 5001 n m  Gebührennummer (GNR)
-  5002 1 107 1 st,   \ 5002 1 k  Art der Untersuchung
-  5003 1 107 1 st,   \ 5003 1 k  (N)BSNR des vermittelten Facharztes
-  5005 1 107 1 st,   \ 5005 1 k  Multiplikator
-  5006 1 107 1 st,   \ 5006 1 k  Um-Uhrzeit
-  5008 1 107 1 st,   \ 5008 1 k  DKM
-  5009 0 107 1 st,   \ 5009 n k  freier Begründungstext
-  5010 1 109 1 st,   \ 5010 1 m  Chargennummer
-  5012 0 107 1 st,   \ 5012 n k  Sachkosten / Materialkosten in Cent
-  5011 0 109 1 st,   \ 5011 n m  Sachkosten-Bezeichnung
-  5074 1 107 1 st,   \ 5074 1 k  Name Hersteller/ Lieferant
-  5075 1 107 1 st,   \ 5075 1 k  Artikel-/ Modellnummer
-  5076 1 107 1 st,   \ 5076 1 k  Rechnungsnummer
-  5013 1 107 1 st,   \ 5013 1 k  Prozent der Leistung
-  5015 0 107 1 st,   \ 5015 n k  Organ
-  5016 0 107 1 st,   \ 5016 n k  Name des Arztes
-  5018 1 107 1 st,   \ 5018 1 k  Zone bei Besuchen
-  5019 1 107 1 st,   \ 5019 1 k  Erbringungsort / Standort des Gerätes
-  5020 1 107 1 st,   \ 5020 1 k  Wiederholungsuntersuchung
-  5021 1 107 1 st,   \ 5021 1 k  Jahr der letzten Krebsfrüherkennungs-unt
-  5023 1 107 1 st,   \ 5023 1 k  GO-Nummern-Zusatz
-  5024 1 107 1 st,   \ 5024 1 k  GNR-Zusatzkennzeichen für poststationär 
-  5025 1 107 1 st,   \ 5025 1 k  Aufnahmedatum
-  5026 1 107 1 st,   \ 5026 1 k  Entlassungsdatum
-  5034 1 107 1 st,   \ 5034 1 k  OP-Datum
-  5035 0 107 1 st,   \ 5035 n k  OP-Schlüssel
-  5041 1 107 1 st,   \ 5041 1 k  Seitenlokalisation OPS
-  5036 0 107 1 st,   \ 5036 n k  GNR als Begründung
-  5037 1 109 1 st,   \ 5037 1 m  Gesamt-SchnittNaht-Zeit (Minuten)
-  5038 0 107 1 st,   \ 5038 n k  Komplikation
-  5040 1 107 1 st,   \ 5040 1 k  Patientennummer der eDokumentation Hautk
-  5050 0 109 1 st,   \ 5050 n m  Melde-ID Implantateregister
-  5051 1 109 1 st,   \ 5051 1 m  Hash-String Implantate-register
-  5052 1 109 1 st,   \ 5052 1 m  Hash-Wert Implantateregister
-  5042 1 107 1 st,   \ 5042 1 k  Mengenangabe Kontrast-/Arzneimittel
-  5043 1 109 1 st,   \ 5043 1 m  Maßeinheit Kontrast-/Arzneimittel
-  5077 0 109 1 st,   \ 5077 n m  HGNC-Gensymbol
-  5078 0 109 1 st,   \ 5078 n m  Gen-Name
-  5079 0 109 1 st,   \ 5079 n m  Art der Erkrankung
-  5098 1  77 1 st,   \ 5098 1 M  (N)BSNR des Ortes der Leistungserbringun
-  5099 1  77 1 st,   \ 5099 1 M  Lebenslange Arztnummer (LANR) des Vertra
-  6001 0 109 2 st,   \ 6001 n m  ICD-Code
-  6003 1  77 2 st,   \ 6003 1 M  Diagnosensicherheit
-  6004 1 107 2 st,   \ 6004 1 k  Seitenlokalisation
-  6006 0 107 2 st,   \ 6006 n k  Diagnosenerläuterung
-  6008 0 109 2 st,   \ 6008 n m  Diagnosenausnahmetatbestand
-  3673 0 109 3 st,   \ 3673 n m  Dauerdiagnose (ICDCode)
-  3674 1 109 3 st,   \ 3674 1 m  Diagnosensicherheit Dauerdiagnose
-  3675 1 107 3 st,   \ 3675 1 k  Seitenlokalisation Dauerdiagnose
-  3676 0 107 3 st,   \ 3676 n k  Diagnosenerläuterung Dauerdiagnose
-  3677 0 109 3 st,   \ 3677 n m  Diagnosenausnahmetatbestand Dauerdiagnos
+  5001 0  80 2 st,   \   5001 n P  Gebührennummer (GNR)
+  5002 1 107 3 st,   \     5002 1 k  Art der Untersuchung
+  5003 1 107 3 st,   \     5003 1 k  (N)BSNR des vermittelten Facharzte
+  5005 1 107 3 st,   \     5005 1 k  Multiplikator  [Regel 894]
+  5006 1 107 3 st,   \     5006 1 k  Um-Uhrzeit
+  5008 1 107 3 st,   \     5008 1 k  DKM
+  5009 0 107 3 st,   \     5009 n k  freier Begründungstext
+  5010 1 109 3 st,   \     5010 1 m  Chargennummer  [Regel 868]
+  5012 0 107 3 st,   \     5012 n k  Sachkosten / Materialkosten in Cen
+  5011 0  80 4 st,   \       5011 n P  Sachkosten-Bezeichnung
+  5074 1 107 4 st,   \       5074 1 k  Name Hersteller/ Lieferant
+  5075 1 107 4 st,   \       5075 1 k  Artikel-/ Modellnummer
+  5076 1 107 4 st,   \       5076 1 k  Rechnungsnummer
+  5013 1 107 3 st,   \     5013 1 k  Prozent der Leistung
+  5015 0 107 3 st,   \     5015 n k  Organ
+  5016 0 107 3 st,   \     5016 n k  Name des Arztes
+  5018 1 107 3 st,   \     5018 1 k  Zone bei Besuchen
+  5019 1 107 3 st,   \     5019 1 k  Erbringungsort / Standort des Gerä
+  5020 1 107 3 st,   \     5020 1 k  Wiederholungsuntersuchung
+  5021 1 107 4 st,   \       5021 1 k  Jahr der letzten Krebsfrüherkennun
+  5023 1 107 3 st,   \     5023 1 k  GO-Nummern-Zusatz
+  5024 1 107 3 st,   \     5024 1 k  GNR-Zusatzkennzeichen für poststat
+  5025 1 107 3 st,   \     5025 1 k  Aufnahmedatum
+  5026 1 107 3 st,   \     5026 1 k  Entlassungsdatum
+  5034 1 107 3 st,   \     5034 1 k  OP-Datum
+  5035 0 107 3 st,   \     5035 n k  OP-Schlüssel
+  5041 1 107 4 st,   \       5041 1 k  Seitenlokalisation OPS  [Regel 706]
+  5036 0 107 3 st,   \     5036 n k  GNR als Begründung
+  5037 1 109 3 st,   \     5037 1 m  Gesamt-Schnitt-Naht-Zeit (Minuten)  [Simultaneingriff]
+  5038 0 107 3 st,   \     5038 n k  Komplikation
+  5040 1 107 3 st,   \     5040 1 k  Patientennummer der eDokumentation
+  5050 0 109 3 st,   \     5050 n m  Melde-ID Implantateregister  [Regel 888 Regel 894]
+  5051 1 109 4 st,   \       5051 1 m  Hash-String Implantate-register  [Regel 889]
+  5052 1 109 4 st,   \       5052 1 m  Hash-Wert Implantateregister  [Regel 890]
+  5042 1 107 3 st,   \     5042 1 k  Mengenangabe Kontrast-/Arzneimitte
+  5043 1  80 4 st,   \       5043 1 P  Maßeinheit Kontrast-/Arzneimittel
+  5077 0 109 3 st,   \     5077 n m  HGNC-Gensymbol  [Regel 770 Regel 816 Regel 828 ]
+  5078 0 109 4 st,   \       5078 n m  Gen-Name  [Regel 816 Regel 891 Regel 893]
+  5079 0 109 3 st,   \     5079 n m  Art der Erkrankung  [Regel 770 Regel 816 Regel 828 ]
+  5098 1  77 3 st,   \     5098 1 M  (N)BSNR des Ortes der Leistungserb
+  5099 1  77 3 st,   \     5099 1 M  Lebenslange Arztnummer (LANR) des 
+  6001 0 109 1 st,   \ 6001 n m  ICD-Code  [Regel 486 Regel 828 Regel 829 ]
+  6003 1  77 2 st,   \   6003 1 M  Diagnosensicherheit
+  6004 1 107 2 st,   \   6004 1 k  Seitenlokalisation
+  6006 0 107 2 st,   \   6006 n k  Diagnosenerläuterung
+  6008 0 109 2 st,   \   6008 n m  Diagnosenausnahmetatbestand  [Regel 491]
+  3673 0 109 1 st,   \ 3673 n m  Dauerdiagnose (ICD-Code)  [Regel 486]
+  3674 1  80 2 st,   \   3674 1 P  Diagnosensicherheit Dauerdiagnose
+  3675 1 107 2 st,   \   3675 1 k  Seitenlokalisation Dauerdiagnose
+  3676 0 107 2 st,   \   3676 n k  Diagnosenerläuterung Dauerdiagnose
+  3677 0 109 2 st,   \   3677 n m  Diagnosenausnahmetatbestand Dauerd  [Regel 491]
   0 0 0 0 st,
 create st-0104
-  8000 1  77 0 st,   \ 8000 1 M  Satzart
-  3000 1  75 0 st,   \ 3000 1 K  Patientennummer
-  3003 1  75 0 st,   \ 3003 1 K  Schein-ID
-  3006 1 109 0 st,   \ 3006 1 m  CDM Version
-  3010 1 109 0 st,   \ 3010 1 m  Datum und Uhrzeit der Onlineprüfung und 
-  3011 1 109 0 st,   \ 3011 1 m  Ergebnis der Onlineprüfung und -aktualis
-  3012 1 107 0 st,   \ 3012 1 k  Error-Code
-  3013 1 107 0 st,   \ 3013 1 k  Prüfziffer des Fachdienstes
-  3100 1  75 0 st,   \ 3100 1 K  Namenszusatz
-  3120 1  75 0 st,   \ 3120 1 K  Vorsatzwort
-  3101 1  77 0 st,   \ 3101 1 M  Name
-  3102 1  77 0 st,   \ 3102 1 M  Vorname
-  3103 1  77 0 st,   \ 3103 1 M  Geburtsdatum
-  3104 1  75 0 st,   \ 3104 1 K  Titel
-  3105 1 109 0 st,   \ 3105 1 m  Versichertennummer
-  3119 1 109 0 st,   \ 3119 1 m  Versicherten_ID
-  3107 1  75 0 st,   \ 3107 1 K  Straße
-  3109 1  75 0 st,   \ 3109 1 K  Hausnummer
-  3115 1  75 0 st,   \ 3115 1 K  Anschriftenzusatz
-  3112 1 109 0 st,   \ 3112 1 m  PLZ
-  3114 1 109 0 st,   \ 3114 1 m  Wohnsitzlaendercode
-  3113 1  75 0 st,   \ 3113 1 K  Ort
-  3121 1 109 0 st,   \ 3121 1 m  PostfachPLZ
-  3122 1  75 0 st,   \ 3122 1 K  PostfachOrt
-  3123 1  75 0 st,   \ 3123 1 K  Postfach
-  3124 1 109 0 st,   \ 3124 1 m  PostfachWohnsitzlaendercode
-  3116 1 109 0 st,   \ 3116 1 m  WOP
-  3108 1  77 0 st,   \ 3108 1 M  Versichertenart
-  3110 1  77 0 st,   \ 3110 1 M  Geschlecht
-  4101 1  77 0 st,   \ 4101 1 M  Quartal
-  4104 1  77 0 st,   \ 4104 1 M  Abrechnungs-VKNR
-  4106 1  77 0 st,   \ 4106 1 M  Kostenträger-Abrechnungsbereich (KTAB)
-  4108 1  75 0 st,   \ 4108 1 K  Zulassungsnummer (mobiles Lesegerät)
-  4109 1 109 0 st,   \ 4109 1 m  Letzter Einlesetag der Versichertenkarte
-  4112 1  75 0 st,   \ 4112 1 K  eEB vorhanden
-  4133 1 109 0 st,   \ 4133 1 m  VersicherungsschutzBeginn
-  4110 1  75 0 st,   \ 4110 1 K  Versicherungsschutz Ende
-  4111 1  77 0 st,   \ 4111 1 M  Kostentraegerkennung
-  4134 1 109 0 st,   \ 4134 1 m  Kostentraegername
-  4131 1  77 0 st,   \ 4131 1 M  BesonderePersonengruppe
-  4132 1  77 0 st,   \ 4132 1 M  DMP_Kennzeichnung
-  4121 1  77 0 st,   \ 4121 1 M  Gebührenordnung
-  4122 1  77 0 st,   \ 4122 1 M  Abrechnungsgebiet
-  4123 1  75 0 st,   \ 4123 1 K  Personenkreis / Untersuchungskategorie
-  4124 1  75 0 st,   \ 4124 1 K  SKT-Zusatzangaben
-  4125 1  75 0 st,   \ 4125 1 K  Gültigkeitszeitraum von ... bis ...
-  4126 0  75 0 st,   \ 4126 n K  SKT-Bemerkungen
-  4202 1  75 0 st,   \ 4202 1 K  Unfall, Unfallfolgen
-  4239 1  77 0 st,   \ 4239 1 M  Scheinuntergruppe
-  4103 1  75 0 st,   \ 4103 1 K  Vermittlungs-/Kontaktart
-  4114 1 107 0 st,   \ 4114 1 k  Vermittlungscode
-  4115 1 107 0 st,   \ 4115 1 k  Tag der Terminvermittlung
-  4105 0 107 0 st,   \ 4105 n k  Ergänzende Informationen zur Vermittlung
-  4243 1  77 0 st,   \ 4243 1 M  Weiterbehandelnder Arzt
+  8000 1  77 1 st,   \ 8000 1 M  Satzart
+  3000 1  75 1 st,   \ 3000 1 K  Patientennummer
+  3003 1  75 1 st,   \ 3003 1 K  Schein-ID
+  3006 1 109 1 st,   \ 3006 1 m  CDM Version  [Regel 307]
+  3010 1 109 1 st,   \ 3010 1 m  Datum und Uhrzeit der Onlineprüfun  [falls eGK eingelesen wurde und]
+  3011 1  80 2 st,   \   3011 1 P  Ergebnis der Onlineprüfung und -ak
+  3012 1 107 2 st,   \   3012 1 k  Error-Code
+  3013 1 107 2 st,   \   3013 1 k  Prüfziffer des Fachdienstes
+  3100 1  75 1 st,   \ 3100 1 K  Namenszusatz
+  3120 1  75 1 st,   \ 3120 1 K  Vorsatzwort
+  3101 1  77 1 st,   \ 3101 1 M  Name
+  3102 1  77 1 st,   \ 3102 1 M  Vorname
+  3103 1  77 1 st,   \ 3103 1 M  Geburtsdatum
+  3104 1  75 1 st,   \ 3104 1 K  Titel
+  3105 1 109 1 st,   \ 3105 1 m  Versichertennummer  [Regel 776]
+  3119 1 109 1 st,   \ 3119 1 m  Versicherten_ID  [Regel 776]
+  3107 1  75 1 st,   \ 3107 1 K  Straße
+  3109 1  75 1 st,   \ 3109 1 K  Hausnummer
+  3115 1  75 1 st,   \ 3115 1 K  Anschriftenzusatz
+  3112 1 109 1 st,   \ 3112 1 m  PLZ  [Regel 479]
+  3114 1 109 1 st,   \ 3114 1 m  Wohnsitzlaendercode  [Regel 784]
+  3113 1  75 1 st,   \ 3113 1 K  Ort
+  3121 1 109 1 st,   \ 3121 1 m  PostfachPLZ  [Regel 479]
+  3122 1  75 1 st,   \ 3122 1 K  PostfachOrt
+  3123 1  75 1 st,   \ 3123 1 K  Postfach
+  3124 1 109 1 st,   \ 3124 1 m  PostfachWohnsitzlaendercode  [Regel 784]
+  3116 1 109 1 st,   \ 3116 1 m  WOP  [Regel 774]
+  3108 1  77 1 st,   \ 3108 1 M  Versichertenart
+  3110 1  77 1 st,   \ 3110 1 M  Geschlecht
+  4101 1  77 1 st,   \ 4101 1 M  Quartal
+  4104 1  77 1 st,   \ 4104 1 M  Abrechnungs-VKNR
+  4106 1  77 1 st,   \ 4106 1 M  Kostenträger-Abrechnungsbereich (K
+  4108 1  75 1 st,   \ 4108 1 K  Zulassungsnummer (mobiles Lesegerä
+  4109 1 109 1 st,   \ 4109 1 m  Letzter Einlesetag der Versicherte  [falls Versichertenkarte eingel]
+  4112 1  75 1 st,   \ 4112 1 K  eEB vorhanden  [Regel 895]
+  4133 1 109 1 st,   \ 4133 1 m  VersicherungsschutzBeginn  [Regel 775]
+  4110 1  75 1 st,   \ 4110 1 K  Versicherungsschutz Ende
+  4111 1  77 1 st,   \ 4111 1 M  Kostentraegerkennung
+  4134 1 109 1 st,   \ 4134 1 m  Kostentraegername  [Regel 777]
+  4131 1  77 1 st,   \ 4131 1 M  BesonderePersonengruppe
+  4132 1  77 1 st,   \ 4132 1 M  DMP_Kennzeichnung
+  4121 1  77 1 st,   \ 4121 1 M  Gebührenordnung
+  4122 1  77 1 st,   \ 4122 1 M  Abrechnungsgebiet
+  4123 1  75 1 st,   \ 4123 1 K  Personenkreis / Untersuchungskateg
+  4124 1  75 1 st,   \ 4124 1 K  SKT-Zusatzangaben
+  4125 1  75 1 st,   \ 4125 1 K  Gültigkeitszeitraum von ... bis ..
+  4126 0  75 1 st,   \ 4126 n K  SKT-Bemerkungen
+  4202 1  75 1 st,   \ 4202 1 K  Unfall, Unfallfolgen
+  4239 1  77 1 st,   \ 4239 1 M  Scheinuntergruppe
+  4103 1  75 1 st,   \ 4103 1 K  Vermittlungs-/Kontaktart  [Regel 870 Regel 877]
+  4114 1 107 2 st,   \   4114 1 k  Vermittlungscode
+  4115 1 107 2 st,   \   4115 1 k  Tag der Terminvermittlung  [Regel 877 Regel 886 Regel 887]
+  4105 0 107 2 st,   \   4105 n k  Ergänzende Informationen zur Vermi
+  4243 1  77 1 st,   \ 4243 1 M  Weiterbehandelnder Arzt
   5000 0  77 1 st,   \ 5000 n M  Leistungstag
-  5001 0 109 1 st,   \ 5001 n m  Gebührennummer (GNR)
-  5002 1 107 1 st,   \ 5002 1 k  Art der Untersuchung
-  5003 1 107 1 st,   \ 5003 1 k  (N)BSNR des vermittelten Facharztes
-  5005 1 107 1 st,   \ 5005 1 k  Multiplikator
-  5006 1 107 1 st,   \ 5006 1 k  Um-Uhrzeit
-  5008 1 107 1 st,   \ 5008 1 k  DKM
-  5009 0 107 1 st,   \ 5009 n k  freier Begründungstext
-  5010 1 109 1 st,   \ 5010 1 m  Chargennummer
-  5012 0 107 1 st,   \ 5012 n k  Sachkosten / Materialkosten in Cent
-  5011 0 109 1 st,   \ 5011 n m  Sachkosten-Bezeichnung
-  5074 1 107 1 st,   \ 5074 1 k  Name Hersteller/ Lieferant
-  5075 1 107 1 st,   \ 5075 1 k  Artikel-/ Modellnummer
-  5076 1 107 1 st,   \ 5076 1 k  Rechnungsnummer
-  5013 1 107 1 st,   \ 5013 1 k  Prozent der Leistung
-  5015 0 107 1 st,   \ 5015 n k  Organ
-  5016 0 107 1 st,   \ 5016 n k  Name des Arztes
-  5017 1 107 1 st,   \ 5017 1 k  Besuchsort bei Hausbesuchen
-  5018 1 107 1 st,   \ 5018 1 k  Zone bei Besuchen
-  5019 1 107 1 st,   \ 5019 1 k  Erbringungsort / Standort des Gerätes
-  5020 1 107 1 st,   \ 5020 1 k  Wiederholungsuntersuchung
-  5021 1 107 1 st,   \ 5021 1 k  Jahr der letzten Krebsfrüherkennungs-unt
-  5023 1 107 1 st,   \ 5023 1 k  GO-Nummern-Zusatz
-  5024 1 107 1 st,   \ 5024 1 k  GNR-Zusatzkennzeichen für poststationär 
-  5025 1 107 1 st,   \ 5025 1 k  Aufnahmedatum
-  5026 1 107 1 st,   \ 5026 1 k  Entlassungsdatum
-  5034 1 107 1 st,   \ 5034 1 k  OP-Datum
-  5035 0 107 1 st,   \ 5035 n k  OP-Schlüssel
-  5041 1 107 1 st,   \ 5041 1 k  Seitenlokalisation OPS
-  5036 0 107 1 st,   \ 5036 n k  GNR als Begründung
-  5037 1 109 1 st,   \ 5037 1 m  Gesamt-SchnittNaht-Zeit (Minuten)
-  5038 0 107 1 st,   \ 5038 n k  Komplikation
-  5040 1 107 1 st,   \ 5040 1 k  Patientennummer der eDokumentation Hautk
-  5050 0 109 1 st,   \ 5050 n m  Melde-ID Implantateregister
-  5051 1 109 1 st,   \ 5051 1 m  Hash-String Implantate-register
-  5052 1 109 1 st,   \ 5052 1 m  Hash-Wert Implantateregister
-  5042 1 107 1 st,   \ 5042 1 k  Mengenangabe Kontrast-/Arzneimittel
-  5043 1 109 1 st,   \ 5043 1 m  Maßeinheit Kontrast-/Arzneimittel
-  5077 0 109 1 st,   \ 5077 n m  HGNC-Gensymbol
-  5078 0 109 1 st,   \ 5078 n m  Gen-Name
-  5079 0 109 1 st,   \ 5079 n m  Art der Erkrankung
-  5098 1 109 1 st,   \ 5098 1 m  (N)BSNR des Ortes der Leistungserbringun
-  5102 1 109 1 st,   \ 5102 1 m  Krankenhaus-IK (im Rahmen der ASVAbrechn
-  5099 1 109 1 st,   \ 5099 1 m  Lebenslange Arztnummer (LANR) des Vertra
-  5101 1 109 1 st,   \ 5101 1 m  Pseudo-LANR (für Krankenhausärzte im Rah
-  5100 1  75 1 st,   \ 5100 1 K  ASV-Teamnummer des Vertragsarztes
-  6001 0 109 2 st,   \ 6001 n m  ICD-Code
-  6003 1 109 2 st,   \ 6003 1 m  Diagnosensicherheit
-  6004 1 107 2 st,   \ 6004 1 k  Seitenlokalisation
-  6006 0 107 2 st,   \ 6006 n k  Diagnosenerläuterung
-  6008 0 109 2 st,   \ 6008 n m  Diagnosenausnahmetatbestand
-  3673 0 109 3 st,   \ 3673 n m  Dauerdiagnose (ICDCode)
-  3674 1 109 3 st,   \ 3674 1 m  Diagnosensicherheit Dauerdiagnose
-  3675 1 107 3 st,   \ 3675 1 k  Seitenlokalisation Dauerdiagnose
-  3676 0 107 3 st,   \ 3676 n k  Diagnosenerläuterung Dauerdiagnose
-  3677 0 109 3 st,   \ 3677 n m  Diagnosenausnahmetatbestand Dauerdiagnos
+  5001 0  80 2 st,   \   5001 n P  Gebührennummer (GNR)
+  5002 1 107 3 st,   \     5002 1 k  Art der Untersuchung
+  5003 1 107 3 st,   \     5003 1 k  (N)BSNR des vermittelten Facharzte
+  5005 1 107 3 st,   \     5005 1 k  Multiplikator  [Regel 894]
+  5006 1 107 3 st,   \     5006 1 k  Um-Uhrzeit
+  5008 1 107 3 st,   \     5008 1 k  DKM
+  5009 0 107 3 st,   \     5009 n k  freier Begründungstext
+  5010 1 109 3 st,   \     5010 1 m  Chargennummer  [Regel 868]
+  5012 0 107 3 st,   \     5012 n k  Sachkosten / Materialkosten in Cen
+  5011 0  80 4 st,   \       5011 n P  Sachkosten-Bezeichnung
+  5074 1 107 4 st,   \       5074 1 k  Name Hersteller/ Lieferant
+  5075 1 107 4 st,   \       5075 1 k  Artikel-/ Modellnummer
+  5076 1 107 4 st,   \       5076 1 k  Rechnungsnummer
+  5013 1 107 3 st,   \     5013 1 k  Prozent der Leistung
+  5015 0 107 3 st,   \     5015 n k  Organ
+  5016 0 107 3 st,   \     5016 n k  Name des Arztes
+  5017 1 107 3 st,   \     5017 1 k  Besuchsort bei Hausbesuchen
+  5018 1 107 3 st,   \     5018 1 k  Zone bei Besuchen
+  5019 1 107 3 st,   \     5019 1 k  Erbringungsort / Standort des Gerä
+  5020 1 107 3 st,   \     5020 1 k  Wiederholungsuntersuchung
+  5021 1 107 4 st,   \       5021 1 k  Jahr der letzten Krebsfrüherkennun
+  5023 1 107 3 st,   \     5023 1 k  GO-Nummern-Zusatz
+  5024 1 107 3 st,   \     5024 1 k  GNR-Zusatzkennzeichen für poststat
+  5025 1 107 3 st,   \     5025 1 k  Aufnahmedatum
+  5026 1 107 3 st,   \     5026 1 k  Entlassungsdatum
+  5034 1 107 3 st,   \     5034 1 k  OP-Datum
+  5035 0 107 3 st,   \     5035 n k  OP-Schlüssel
+  5041 1 107 4 st,   \       5041 1 k  Seitenlokalisation OPS  [Regel 706]
+  5036 0 107 3 st,   \     5036 n k  GNR als Begründung
+  5037 1 109 3 st,   \     5037 1 m  Gesamt-Schnitt-Naht-Zeit (Minuten)  [Simultaneingriff]
+  5038 0 107 3 st,   \     5038 n k  Komplikation
+  5040 1 107 3 st,   \     5040 1 k  Patientennummer der eDokumentation
+  5050 0 109 3 st,   \     5050 n m  Melde-ID Implantateregister  [Regel 888 Regel 894]
+  5051 1 109 4 st,   \       5051 1 m  Hash-String Implantate-register  [Regel 889]
+  5052 1 109 4 st,   \       5052 1 m  Hash-Wert Implantateregister  [Regel 890]
+  5042 1 107 3 st,   \     5042 1 k  Mengenangabe Kontrast-/Arzneimitte
+  5043 1  80 4 st,   \       5043 1 P  Maßeinheit Kontrast-/Arzneimittel
+  5077 0 109 3 st,   \     5077 n m  HGNC-Gensymbol  [Regel 770 Regel 816 Regel 828 ]
+  5078 0 109 4 st,   \       5078 n m  Gen-Name  [Regel 816 Regel 891 Regel 893]
+  5079 0 109 3 st,   \     5079 n m  Art der Erkrankung  [Regel 770 Regel 816 Regel 828 ]
+  5098 1 109 3 st,   \     5098 1 m  (N)BSNR des Ortes der Leistungserb  [Regel 859]
+  5102 1 109 3 st,   \     5102 1 m  Krankenhaus-IK (im Rahmen der ASV-  [Regel 859]
+  5099 1 109 3 st,   \     5099 1 m  Lebenslange Arztnummer (LANR) des   [Regel 837]
+  5101 1 109 3 st,   \     5101 1 m  Pseudo-LANR (für Krankenhausärzte   [Regel 837]
+  5100 1  75 3 st,   \     5100 1 K  ASV-Teamnummer des Vertragsarztes
+  6001 0 109 1 st,   \ 6001 n m  ICD-Code  [Regel 486 Regel 828 Regel 829 ]
+  6003 1  80 2 st,   \   6003 1 P  Diagnosensicherheit
+  6004 1 107 2 st,   \   6004 1 k  Seitenlokalisation
+  6006 0 107 2 st,   \   6006 n k  Diagnosenerläuterung
+  6008 0 109 2 st,   \   6008 n m  Diagnosenausnahmetatbestand  [Regel 491]
+  3673 0 109 1 st,   \ 3673 n m  Dauerdiagnose (ICD-Code)  [Regel 486]
+  3674 1  80 2 st,   \   3674 1 P  Diagnosensicherheit Dauerdiagnose
+  3675 1 107 2 st,   \   3675 1 k  Seitenlokalisation Dauerdiagnose
+  3676 0 107 2 st,   \   3676 n k  Diagnosenerläuterung Dauerdiagnose
+  3677 0 109 2 st,   \   3677 n m  Diagnosenausnahmetatbestand Dauerd  [Regel 491]
   0 0 0 0 st,

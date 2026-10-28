@@ -122,7 +122,7 @@ create monatstage 31 c, 28 c, 31 c, 30 c, 31 c, 30 c,
   >r >r >r >r >r  ,  r> , r> , r> , r> , r> ,
   [char] " parse str, align ;
 
-: st, ( fk vorkommen feldart zone -- )  >r >r >r , r> , r> , r> , ;
+: st, ( fk vorkommen feldart ebene -- )  >r >r >r , r> , r> , r> , ;
 
 include ./kvdt-tabellen.fs
 
@@ -145,12 +145,15 @@ include ./kvdt-tabellen.fs
 variable felder   variable #felder
 variable saetze   variable #saetze
 
-: feld   ( i -- adr )  4 cells *  felder @ + ;
+: feld   ( i -- adr )  6 cells *  felder @ + ;
 : f-zeile ( i -- n )   feld @ ;
 : f-fk    ( i -- fk )  feld cell+ @ ;
 : f$      ( i -- a u ) feld 2 cells + 2@ ;
+: f-eintrag ( i -- adr ) feld 4 cells + ;     \ zugeordneter Eintrag der Satztabelle
+: f-eltern  ( i -- adr ) feld 5 cells + ;     \ Feld der uebergeordneten Ebene (-1 = Satz)
 : feld-merken ( zeile fk a u -- )
-  #felder @ feld >r  r@ 2 cells + 2!  r@ cell+ !  r> !  1 #felder +! ;
+  #felder @ feld >r  r@ 2 cells + 2!  r@ cell+ !  r@ !
+  -1 r@ 4 cells + !  -1 r> 5 cells + !  1 #felder +! ;
 
 : satz    ( s -- adr )  3 cells *  saetze @ + ;
 : s-anfang ( s -- i )   satz @ ;
@@ -573,7 +576,7 @@ variable pos  variable ende
   0 puffer @ puffer# @ + puffer @ ?do i c@ 10 = if 1+ then loop 1+ ;
 
 : zeilen-lesen ( -- )
-  zeilen-zaehlen dup 4 cells * allocate throw felder !
+  zeilen-zaehlen dup 6 cells * allocate throw felder !
                      3 cells * allocate throw saetze !
   0 #felder !  0 #zeilen !
   puffer @ pos !  puffer @ puffer# @ + ende !
@@ -682,61 +685,106 @@ variable st-tab
 : st-fk    ( k -- fk ) st-e @ ;
 : st-vork  ( k -- n )  st-e cell+ @ ;          \ 1 = einmal, 0 = n-mal
 : st-art   ( k -- c )  st-e 2 cells + @ ;
-: st-zone  ( k -- z )  st-e 3 cells + @ ;
+: st-ebene ( k -- n )  st-e 3 cells + @ ;
 : st-ende? ( k -- f )  st-fk 0= ;
+: st-anzahl ( -- n )   0 begin dup st-ende? 0= while 1+ repeat ;
 
 : st-erste ( fk -- k | -1 )
   0 begin dup st-ende? 0= while
     2dup st-fk = if nip exit then 1+
   repeat 2drop -1 ;
-: st-vor ( fk von -- k | -1 )             \ ab Position "von" vorwaerts
-  begin dup st-ende? 0= while
-    2dup st-fk = if nip exit then 1+
-  repeat 2drop -1 ;
-: st-zurueck ( fk von zone -- k | -1 )    \ ab "von" rueckwaerts in derselben Zone
-  >r begin dup 0< 0= if dup st-zone r@ = else false then while
-    2dup st-fk = if nip r> drop exit then 1-
-  repeat r> drop 2drop -1 ;
 
-variable st-pos
-: reihenfolge-pruefen ( -- )
-  0 st-pos !
-  re @ rs @ 1+ ?do
-    i f-fk 9901 <> if
-      i f-fk st-erste  dup 0< if
-        drop i ort 9004 s" Feld in dieser Satzart nicht zulaessig (Satztabelle)" fehler!
+\ Hierarchie (Kap. 1.5.2): Ein Eintrag der Ebene n gehoert zum letzten
+\ vorangehenden Eintrag der Ebene n-1. Sein Unterbaum endet beim naechsten
+\ Eintrag mit gleicher oder kleinerer Ebene.
+: unterbaum-ende ( k -- j )
+  dup st-ebene >r 1+
+  begin dup st-ende? 0= if dup st-ebene r@ > else false then while 1+ repeat
+  r> drop ;
+
+variable s-fk  variable s-eb
+: st-suche ( fk von bis ebene -- k | -1 )   \ Eintrag fk der Ebene in [von, bis)
+  s-eb ! rot s-fk ! swap
+  begin 2dup > while
+    dup st-fk s-fk @ =  over st-ebene s-eb @ = and if nip exit then
+    1+
+  repeat 2drop -1 ;
+
+\ Aktueller Pfad durch die Hierarchie: Eintrag und Feld je Ebene
+create pfad-e 8 cells allot   create pfad-i 8 cells allot   variable tiefe
+: p-e ( ebene -- adr ) cells pfad-e + ;
+: p-i ( ebene -- adr ) cells pfad-i + ;
+
+: suchbereich ( ebene -- von bis )   \ wo darf ein Feld dieser Ebene jetzt stehen?
+  dup 1 = if                                       \ Satzebene
+    tiefe @ 1 >= if drop 1 p-e @ else drop 0 then  st-anzahl exit
+  then
+  dup tiefe @ <= if dup p-e @ else dup 1- p-e @ 1+ then   ( ebene von )
+  swap 1- p-e @ unterbaum-ende ;
+
+variable e-i  variable e-gefunden
+: einordnen ( i -- )        \ Feld i in die Hierarchie der Satztabelle einordnen
+  e-i !  false e-gefunden !
+  tiefe @ 1+ 6 min
+  begin dup 1 >= e-gefunden @ 0= and while
+    e-i @ f-fk  over suchbereich  3 pick st-suche      ( ebene k )
+    dup 0< 0= if
+      true e-gefunden !
+      over tiefe @ <= if over p-e @ over = else false then
+      over st-vork 1 = and if                     \ gleicher Eintrag, Vorkommen 1
+        e-i @ ort 9004 s" Feld mehrfach unter demselben uebergeordneten Feld (Vorkommen 1)" fehler!
+        drop
       else
-        st-zone  st-pos @ st-zone  < if
-          i ort 9004 s" Reihenfolge: Feld gehoert vor den Leistungs-/Diagnoseteil" fehler!
-        else
-          i f-fk st-erste st-vork 0= if        \ Vorkommen n: Wiederholung erlaubt
-            i f-fk st-pos @ dup st-zone st-zurueck
-            dup 0< if drop i f-fk st-pos @ st-vor then
-          else i f-fk st-pos @ 1+ st-vor then
-          dup 0< if drop i ort
-            9004 s" Reihenfolge laut Satztabelle verletzt oder Feld mehrfach (Vorkommen 1)" fehler!
-          else st-pos ! then
-        then
+        dup e-i @ f-eintrag !
+        over 1 = if -1 else over 1- p-i @ then e-i @ f-eltern !
+        over p-e !  e-i @ over p-i !  dup tiefe !
       then
+    else drop then
+    1-
+  repeat drop
+  e-gefunden @ 0= if
+    e-i @ ort  e-i @ f-fk st-erste 0< if
+      9004 s" Feld in dieser Satzart nicht zulaessig (Satztabelle)" fehler!
+    else
+      9004 s" Reihenfolge/Hierarchie laut Satztabelle verletzt" fehler!
     then
+  then ;
+
+: reihenfolge-pruefen ( -- )
+  0 tiefe !
+  re @ rs @ ?do i f-fk 9901 <> if i einordnen then loop ;
+
+\ Mussfelder: M = unbedingt; P = bedingtes Mussfeld, das nur an das
+\ uebergeordnete Feld gebunden ist (Kap. 1.5.3). Geprueft je Instanz.
+: pflicht? ( k -- f )  st-art dup [char] M = swap [char] P = or ;
+
+variable m-eltern  variable m-k  variable kind-ebene
+: kind-da? ( eltern k -- f )   \ gibt es ein Feld mit Eintrag k unter diesem Elternfeld?
+  m-k ! m-eltern !
+  false re @ rs @ ?do
+    i f-eintrag @ m-k @ =  i f-eltern @ m-eltern @ = and or
   loop ;
 
+: muss-fehlt ( k -- )
+  st-fk ort-fk !  0 ort-u !
+  9006 s" Mussfeld laut Satztabelle fehlt" fehler! ;
+
 : mussfelder-pruefen ( -- )
-  0 begin dup st-ende? 0= while
-    dup st-art [char] M = if
-      dup st-fk hat? 0= if
-        dup st-zone case
-          0 of true endof
-          1 of dup st-fk 5000 = if true else 5001 hat? then endof
-          2 of 6001 hat? endof
-          3 of 3673 hat? endof
-          false swap
-        endcase
-        if satz-ort  dup st-fk ort-fk !  0 ort-u !
-           9006 s" Mussfeld (M) fehlt laut Satztabelle" fehler! then
-      then
+  0 begin dup st-ende? 0= while                      \ Satzebene
+    dup st-ebene 1 = over st-art [char] M = and if
+      dup -1 swap kind-da? 0= if satz-ort dup muss-fehlt then
     then 1+
-  repeat drop ;
+  repeat drop
+  re @ rs @ ?do                                      \ je Feldinstanz
+    i f-eintrag @ dup 0< 0= if
+      dup st-ebene 1+ kind-ebene !  dup 1+ swap unterbaum-ende swap
+      ?do
+        i st-ebene kind-ebene @ = i pflicht? and if
+          j i kind-da? 0= if j ort i muss-fehlt then
+        then
+      loop
+    else drop then
+  loop ;
 
 : leistungstage-pruefen ( -- )      \ Kap. 1.5.2: Leistungstage aufsteigend
   0 re @ rs @ ?do
@@ -1009,6 +1057,11 @@ variable in-gruppe
     i f-fk 0224 = in-gruppe @ and if 2drop true unloop exit then
   loop 2drop false ;
 
+variable hk-i  variable hk-fk
+: hat-kind? ( i fk -- f )   \ hat Feld i ein direkt untergeordnetes Feld fk?
+  hk-fk ! hk-i !
+  false re @ rs @ ?do i f-eltern @ hk-i @ =  i f-fk hk-fk @ = and or loop ;
+
 : kontext-regeln ( -- )
   satzart @ >r
   \ --- Satzart und Scheinuntergruppe
@@ -1023,9 +1076,11 @@ variable in-gruppe
   3112 hat? 3121 hat? or 0= if
     4109 hat? 3114 s" D" wert= 0= 3114 hat? and 3124 s" D" wert= 0= 3124 hat? and or and 0= if
       satz-ort 479 s" weder PLZ 3112 noch Postfach-PLZ 3121 vorhanden" fehler! then then
-  r@ sa-0103 <> if
-    5099 hat? 5101 hat? or 0= if satz-ort 837 s" weder 5099 noch 5101 vorhanden" fehler! then
-    5098 hat? 5102 hat? or 0= if satz-ort 859 s" weder 5098 noch 5102 vorhanden" fehler! then
+  r@ sa-0103 <> if                     \ 837/859 je GNR (Felder der Ebene unter 5001)
+    re @ rs @ ?do i f-fk 5001 = if
+      i 5099 hat-kind? i 5101 hat-kind? or 0= if i ort 837 s" zur GNR fehlt 5099 bzw. 5101" fehler! then
+      i 5098 hat-kind? i 5102 hat-kind? or 0= if i ort 859 s" zur GNR fehlt 5098 bzw. 5102" fehler! then
+    then loop
   then
   \ --- eGK / Versichertenstammdaten
   4109 hat? 3119 hat? and s" 21,27,28" sug-in? 0= and 3006 hat? 0= and if satz-ort 307 s" 3006 (CDM-Version) erforderlich" warnung! then

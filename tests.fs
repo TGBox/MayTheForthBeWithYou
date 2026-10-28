@@ -93,6 +93,10 @@ variable e-a  variable e-u  variable e-f  variable e-w  variable e-i  variable e
   s" testdaten/k1_feld_vor_satz.kvdt"                     1  0  0  9004 erwarte
   s" testdaten/k1_feldlaenge.kvdt"                        1  0  0  9003 erwarte
   s" testdaten/k1_feldtyp_n.kvdt"                         2  0  0  9003 erwarte
+  s" testdaten/k1_hierarchie_mussfeld.kvdt"                1  0  0  9006 erwarte
+  s" testdaten/k1_leistungstag_ohne_gnr.kvdt"              1  0  0  9006 erwarte
+  s" testdaten/k1_vorkommen_doppelt.kvdt"                  1  0  0  9004 erwarte
+  s" testdaten/r837_je_gnr.kvdt"                           2  0  0   837 erwarte
   s" testdaten/k1_laengenangabe_falsch.kvdt"              1  0  0  9001 erwarte
   s" testdaten/k1_leeres_feld.kvdt"                       2  0  0  9001 erwarte
   s" testdaten/k1_leistungstage_absteigend.kvdt"          1  0  0  9004 erwarte
@@ -155,7 +159,7 @@ variable e-a  variable e-u  variable e-f  variable e-w  variable e-i  variable e
   s" testdaten/r820_erstveranlasser_format.kvdt"          1  0  0   820 erwarte
   s" testdaten/r821_ueberweiser_format.kvdt"              1  0  0   821 erwarte
   s" testdaten/r837_859_arzt_ort.kvdt"                    2  0  0   837 erwarte
-  s" testdaten/r850_psychotherapie.kvdt"                  1  0  0   850 erwarte
+  s" testdaten/r850_psychotherapie.kvdt"                  1  1  0   850 erwarte
   s" testdaten/r853_gop_doppelt.kvdt"                     1  0  0   853 erwarte
   s" testdaten/r856_z017_nicht_gesichert.kvdt"            0  1  0   856 erwarte
   s" testdaten/r858_ti_wert_fehlt.kvdt"                   1  0  0   858 erwarte

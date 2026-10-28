@@ -39,7 +39,7 @@ Grundlagen (`K1.6.1`), Text und Feldinhalt.
 | Feldaufbau: Längenangabe = Inhalt + 9, CR LF, keine leeren Felder | Kap. 1.6.1 |
 | Zeichensatz ISO 8859-15 (Steuerzeichen, Verdacht auf UTF-8) | Kap. 1.8 |
 | Länge und Typ (`n`, `a`, `d`) **jedes** Feldes, keine führenden Nullen bei variabler Länge, keine Rand-Leerzeichen | Feldtabellen 2.3.1 / 3.5.1 |
-| zulässige Felder je Satzart, Reihenfolge, Mussfelder (M), Leistungstage aufsteigend | Satztabellen 2.2 / 3.4, Kap. 1.5 |
+| zulässige Felder je Satzart, Reihenfolge und **Hierarchie** (welches Feld zu welchem übergeordneten Feld gehört), Vorkommen 1/n je übergeordnetem Feld, Mussfelder (M) und an das übergeordnete Feld gebundene Mussfelder (m ohne Bedingung), Leistungstage aufsteigend | Satztabellen 2.2 / 3.4, Kap. 1.5 |
 | Anordnung der Sätze in der Datei | Kap. 2.1 / 3.3 |
 | **168 von 204 Regeln** der Container- und ADT-Regeltabelle | Kap. 2.3.2 / 3.5.2 |
 
@@ -58,16 +58,26 @@ Grundlagen (`K1.6.1`), Text und Feldinhalt.
 | Datei | Inhalt |
 | --- | --- |
 | `kvdt.fs` | Prüf-Engine und alle Regeln (ANS-Forth, ca. 1200 Zeilen) |
-| `kvdt-tabellen.fs` | **Generiert:** Feldtabelle (200 Felder) und 10 Satztabellen |
-| `werkzeug/tabellen_erzeugen.py` | Liest die Textfassung der KBV-Doku und erzeugt `kvdt-tabellen.fs` |
-| `tests.fs` | 55 Unit-Tests der Formatregeln + 81 Dateitests |
-| `testdaten/` | Eine gültige Datei und 81 gezielt fehlerhafte Varianten (Endung `.kvdt`, weil Windows `CON` als Gerätenamen reserviert – echte Abrechnungsdateien heißen `*.CON`, die prüft der Prüfer genauso) |
+| `kvdt-tabellen.fs` | **Generiert** aus der Original-PDF: Feldtabelle (200 Felder) und 10 Satztabellen mit Hierarchie-Ebenen |
+| `werkzeug/tabellen_erzeugen.py` | Liest `spec/KBV_ITA_VGEX_Datensatzbeschreibung_KVDT.pdf` (Spaltenpositionen) und erzeugt `kvdt-tabellen.fs` |
+| `tests.fs` | 55 Unit-Tests der Formatregeln + 85 Dateitests |
+| `testdaten/` | Eine gültige Datei und 85 gezielt fehlerhafte Varianten (Endung `.kvdt`, weil Windows `CON` als Gerätenamen reserviert – echte Abrechnungsdateien heißen `*.CON`, die prüft der Prüfer genauso) |
 | `werkzeug/testdaten_erzeugen.py` | Erzeugt die Testdaten neu (ISO 8859-15, CR LF) |
 | `pruefe.fs`, `pruefe.bat`, `tests.bat` | Aufruf über die Kommandozeile (gforth) |
 
-Neue Version der Datensatzbeschreibung? Textfassung erzeugen und
-`python werkzeug/tabellen_erzeugen.py <Doku.pdf.txt>` laufen lassen – Längen,
-Typen, Mussfelder und Reihenfolgen kommen dann direkt aus der neuen Doku.
+Neue Version der Datensatzbeschreibung? PDF nach `spec/` legen und
+
+```text
+pip install pdfplumber
+python werkzeug/tabellen_erzeugen.py spec/KBV_ITA_VGEX_Datensatzbeschreibung_KVDT.pdf
+```
+
+Längen, Typen, Mussfelder, Reihenfolge und Hierarchie kommen dann direkt aus
+der neuen Doku. Die Hierarchie-Ebene liest der Generator aus der x-Position des
+Eintrags in der Spalte „Vorkommen 1 2 3 4 5“ – deshalb die PDF und nicht eine
+Textfassung. Zur Kontrolle wurden die Tabellen einmal unabhängig aus der
+Textfassung und aus der PDF extrahiert: Feldkennungen, Längen, Typen, Vorkommen
+und Feldarten stimmen in beiden Fällen überein.
 
 ## Auslegungen – hier lohnt sich der Blick eines Experten
 
@@ -82,13 +92,13 @@ Zertifizierung kennt:
    den *frühesten* geprüft (wie es Regel 886 ausdrücklich sagt).
 3. **Regel 776:** In der Spalte Prüfstatus steht in der Doku „776“ statt F/W/I –
    hier als **F** angenommen.
-4. **Hierarchie der Satztabellen:** Die Spalten „Vorkommen 1/2/3/4“ (Ebene) sind
-   in der Textfassung verloren gegangen. Die Reihenfolge wird deshalb über die
-   Tabellenreihenfolge, Wiederholgruppen (Vorkommen *n*) und die Blöcke Kopf →
-   Leistungen (5000) → Diagnosen (6001) → Dauerdiagnosen (3673) geprüft.
-   Mussfelder (M) in den Leistungs-/Diagnoseblöcken werden nur verlangt, wenn
-   der Block (5001 bzw. 6001/3673) vorhanden ist. Mit dem Original-PDF ließe sich
-   die Ebene exakt auslesen.
+4. **Bedingte Mussfelder (m):** Steht in der Spalte „Bedingung“ nichts, wird das
+   Feld als an das übergeordnete Feld gebunden gewertet (Kap. 1.5.3) und je
+   Instanz verlangt – z. B. 6003 zu jedem 6001, 5001 zu jedem 5000, 4242 zu 4218.
+   Bedingungen in Textform („falls eGK eingelesen …“) werden nicht geprüft.
+5. **Regeln 837/859** gelten je GNR, weil 5098/5099/5101/5102 laut Satztabelle
+   unter 5001 hängen. Der Anforderungskatalog (K2: „die LANR in FK 5099 oder die
+   Pseudo-LANR in Feld 5101“) spricht eher für *genau eines* – siehe Punkt 1.
 
 ## Was beim Lesen der Doku aufgefallen ist
 
@@ -97,13 +107,16 @@ Zertifizierung kennt:
 - **FK 5076** (Rechnungsnummer): Feldtabelle sagt ≤ 20 Zeichen, das
   Feldverzeichnis (Kap. 7) ≤ 60. Geprüft wird nach der Feldtabelle.
 - Regel 776: Prüfstatus fehlt (siehe oben).
+- Und in eigener Sache: Die erste Version der gültigen Testdatei hatte in der
+  Überweisung 4218 ohne die LANR des Überweisers (4242). Erst die Hierarchie aus
+  der PDF hat gezeigt, dass 4242 unter 4218 ein Mussfeld ist.
 
 ## Vorschlag für die Vorführung
 
-1. `tests.bat` – 136 Tests, alle grün.
+1. `tests.bat` – 140 Tests, alle grün.
 2. `pruefe.bat testdaten\k1_utf8_gespeichert.kvdt` – das Umlaut-Problem kennt jeder.
-3. `kvdt-tabellen.fs` zeigen: 200 Felder und 10 Satztabellen, direkt aus der
-   KBV-Doku generiert – inkl. der Stellen, wo der PDF-Text korrigiert werden musste.
+3. `kvdt-tabellen.fs` zeigen: 200 Felder und 10 Satztabellen mit eingerückter
+   Hierarchie, direkt aus der KBV-PDF generiert.
 4. **Der eigentliche Moment:** Er sucht sich eine Regel aus der Liste der
    Auslegungen (oder eine der nicht umgesetzten) und schaut zu, wie sie live
    geklärt, umgesetzt und mit einer neuen Testdatei abgedeckt wird.
