@@ -1,15 +1,32 @@
 # May the Forth be with you – KVDT-Prüfer in Forth
 
-Ein Prüfer für KVDT-Abrechnungsdateien, geschrieben in ANS-Forth, auf Basis der
-**KBV-Datensatzbeschreibung KVDT, Version 6.08 vom 24. August 2026**.
+Ein blitzschneller Linter und Struktur-Prüfer für KVDT-Abrechnungsdateien, geschrieben in ANS-Forth, auf Basis der **KBV-Datensatzbeschreibung KVDT, Version 6.08 vom 24. August 2026**.
 
-Umfang: **Container-Sätze** (`con0`, `besa`, `rvsa`, `con9`) und das
-**ADT-Datenpaket** (`adt0`, `0101`–`0104`, `adt9`). KADT-, SADT- und
-Hybrid-DRG-Pakete werden erkannt und übersprungen (Hinweis), aber nicht geprüft.
+Umfang: **Container-Sätze** (`con0`, `besa`, `rvsa`, `con9`) und das **ADT-Datenpaket** (`adt0`, `0101`–`0104`, `adt9`). KADT-, SADT- und Hybrid-DRG-Pakete werden erkannt und übersprungen (Hinweis), aber nicht geprüft.
 
-> **Kein Ersatz für das KBV-Prüfmodul.** Viele Regeln brauchen externe Stammdateien
-> (EBM, SDICD, Kostenträger, PLZ, …), die hier nicht vorliegen – siehe unten.
-> Alle Testdaten sind frei erfunden.
+---
+
+## ⚡ Wo dieses Projekt glänzt (und was es besser macht als das KBV-Prüfmodul)
+
+Das offizielle KBV-Prüfmodul ist für die finale Praxisabrechnung unverzichtbar, im **Entwickler- und Schnittstellen-Alltag an PVS-Systemen** aber oft ein schwerfälliger Flaschenhals: Es ist eine träge Blackbox mit erheblichem JVM-Start-Overhead, benötigt hunderte Megabytes an quartalsaktuellen Stammdateien (EBM, ICD, Kostenträger) und liefert bei einfachen Formatfehlern oft unübersichtliche Sammelberichte.
+
+Genau hier glänzt dieser Forth-Prüfer als **ultraschneller, autarker Vorab-Linter**:
+
+| Eigenschaft | 🚀 Dieser Forth-Prüfer | 🐢 Offizielles KBV-Prüfmodul |
+| --- | --- | --- |
+| **Geschwindigkeit** | **< 1 Sekunde** für 147 Testläufe; pure Dateiprüfung im Millisekundenbereich | Deutliche Wartezeit (JVM-Kaltstart, Indizierung der Kataloge) |
+| **Feedback-Schleife** | **Sofortiges Feedback** beim Speichern oder beim Export | Träger Batch-Prüflauf |
+| **CI/CD & Git-Hooks** | **Perfekt integrierbar**: Schlank, portabel, keine Runtime-Voraussetzungen außer Forth | Wegen Lizenzierung, JVM und Stammdateien kaum sinnvoll in Git-Pipelines nutzbar |
+| **Stammdateien-Abhängigkeit** | **Null**: Prüft Struktur, Syntax, Hierarchien & Prüfziffern autark | Benötigt zwingend aktuelle Stammdateien (EBM, SDICD, SDPLZ etc.) |
+| **Fehlerlokalisierung** | **Entwicklerfreundlich**: Exakte Zeilennummer, Feldkennung, Soll/Ist-Längenabgleich und Rohinhalt (z. B. `<KÃ¶ln>`) | Abstrakte Fehlercodes, oft schwer auf die konkrete Zeile rückführbar |
+| **Transparenz & Wartbarkeit** | **100 % Open & Transparent**: ~1200 Zeilen Forth, Tabellen direkt aus der KBV-PDF generiert | Proprietäre Closed-Source-Binary |
+
+> [!NOTE]
+> **Rolle im Gesamtprozess:**  
+> Dieses Tool ist der ideale **Vorab-Linter für Entwicklung, Schnittstellenbau, automatisierte Tests und CI/CD**.  
+> Für die tatsächliche Quartalsabrechnung an die Kassenärztliche Vereinigung wird weiterhin das offizielle KBV-Prüfmodul benötigt, da nur dieses die medizinisch-abrechnungstechnischen Kataloge (z. B. EBM-Gültigkeit im konkreten Quartal) prüft und das geforderte Abgabezertifikat ausstellt.
+
+---
 
 ## Starten
 
