@@ -69,7 +69,15 @@ variable #ok  variable #nok
   s" 742712363" bsnr-819? s" R062: SAPV-BSNR 742712363"                    pruefe-wahr
   s" 742712300" bsnr-819? s" R062: SAPV ohne 63 am Ende"                   pruefe-falsch
   s" 05" s" 01-03,06-21" in-liste? s" Liste: 05 nicht in 01-03,06-21"      pruefe-falsch
-  s" 17" s" 01-03,06-21" in-liste? s" Liste: 17 in 06-21"                  pruefe-wahr ;
+  s" 17" s" 01-03,06-21" in-liste? s" Liste: 17 in 06-21"                  pruefe-wahr
+  \ Werte aus dem KBV-Pruefpaket KVDT 3.7 (Praxis- und Patientendaten der Sichtpruefung)
+  s" 776299002" lanr?        s" KBV-Pruefpaket: LANR 776299002"                pruefe-wahr
+  s" 004110101" lanr?        s" KBV-Pruefpaket: LANR Ueberweiser 004110101"    pruefe-wahr
+  s" 198212400" bsnr-819?    s" KBV-Pruefpaket: BSNR 198212400"                pruefe-wahr
+  s" 198209700" bsnr-819?    s" KBV-Pruefpaket: BSNR Ueberweiser 198209700"    pruefe-wahr
+  s" X110319454" versid?     s" KBV-Pruefpaket: Versicherten-ID X110319454"    pruefe-wahr
+  s" G123456744" versid?     s" KBV-Pruefpaket: Versicherten-ID G123456744"    pruefe-wahr
+  s" 001234566" asv?         s" KBV-Pruefpaket: ASV-Teamnummer 001234566"      pruefe-wahr ;
 
 \ --- Dateitests: Anzahl Fehler/Warnungen/Hinweise und ausgeloeste Regel
 

@@ -60,7 +60,7 @@ Grundlagen (`K1.6.1`), Text und Feldinhalt.
 | `kvdt.fs` | Prüf-Engine und alle Regeln (ANS-Forth, ca. 1200 Zeilen) |
 | `kvdt-tabellen.fs` | **Generiert** aus der Original-PDF: Feldtabelle (200 Felder) und 10 Satztabellen mit Hierarchie-Ebenen |
 | `werkzeug/tabellen_erzeugen.py` | Liest `spec/KBV_ITA_VGEX_Datensatzbeschreibung_KVDT.pdf` (Spaltenpositionen) und erzeugt `kvdt-tabellen.fs` |
-| `tests.fs` | 55 Unit-Tests der Formatregeln + 85 Dateitests |
+| `tests.fs` | 62 Unit-Tests der Formatregeln (davon 7 mit Prüfwerten aus dem KBV-Prüfpaket) + 85 Dateitests |
 | `testdaten/` | Eine gültige Datei und 85 gezielt fehlerhafte Varianten (Endung `.kvdt`, weil Windows `CON` als Gerätenamen reserviert – echte Abrechnungsdateien heißen `*.CON`, die prüft der Prüfer genauso) |
 | `werkzeug/testdaten_erzeugen.py` | Erzeugt die Testdaten neu (ISO 8859-15, CR LF) |
 | `pruefe.fs`, `pruefe.bat`, `tests.bat` | Aufruf über die Kommandozeile (gforth) |
@@ -113,7 +113,7 @@ Zertifizierung kennt:
 
 ## Vorschlag für die Vorführung
 
-1. `tests.bat` – 140 Tests, alle grün.
+1. `tests.bat` – 147 Tests, alle grün.
 2. `pruefe.bat testdaten\k1_utf8_gespeichert.kvdt` – das Umlaut-Problem kennt jeder.
 3. `kvdt-tabellen.fs` zeigen: 200 Felder und 10 Satztabellen mit eingerückter
    Hierarchie, direkt aus der KBV-PDF generiert.
