@@ -1,0 +1,3 @@
+# KVDT-Dateien duerfen von Git nicht bzgl. Zeilenenden konvertiert werden
+*.kvdt -text
+
